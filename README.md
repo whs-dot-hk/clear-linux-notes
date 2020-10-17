@@ -12,8 +12,11 @@ https://docs.01.org/clearlinux/latest/get-started/virtual-machine-install/virt-m
 
 ### Debian
 ```sh
-curl https://www.debian.org/releases/stretch/example-preseed.txt -o preseed.cfg
 echo "allow virbr0" | sudo tee /etc/qemu/bridge.conf
+```
+
+```sh
+curl https://www.debian.org/releases/stretch/example-preseed.txt -o preseed.cfg
 virt-install \
   --name guest1 \
   --memory 2048 \

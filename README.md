@@ -43,3 +43,44 @@ sudo apt-get install -y libcap-dev
 # or clear linux
 sudo swupd bundle-add devpkg-libcap
 ```
+
+## Kpcli
+
+### Install development packages
+```sh
+sudo apt-get install -y libexpat-dev libreadline-dev
+```
+
+### Install perl modules
+```sh
+cpan App::cpanminus
+cpanm Authen::OATH Clone Convert::Base32 Crypt::Rijndael File::KeePass Sort::Naturally Term::ReadKey Term::ReadLine::Gnu Term::ShellUI XML::Parser
+```
+
+### Download kpcli
+```sh
+curl -OJL https://sourceforge.net/projects/kpcli/files/kpcli-3.6.pl/download
+chmod a+x kpcli-3.6.pl
+```
+
+### Otp example
+```sh
+./kpcli-3.6.pl
+> new Internet/test
+Adding new entry to "/Internet"
+Title: test
+Username:
+Password:                ("g" or "w" to auto-generate, "i" for interactive)
+URL:
+Notes/Comments (""):
+(end multi-line input with a single "." on a line)
+| 2FA-TOTP: [TOTP]
+| .
+> otp Internet/test
+```
+
+```sh
+# password is a file contains the master password of test.kdbx
+token=($(./kpcli-3.6.pl --kdb=test.kdbx --pwfile=password --command=otp\ Internet/test))
+echo ${token[0]}
+```

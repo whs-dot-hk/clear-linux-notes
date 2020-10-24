@@ -33,3 +33,13 @@ virt-install \
 virsh destroy guest1
 virsh undefine --domain guest1 --remove-all-storage --delete-snapshots
 ```
+
+## Minijail
+
+### Install libcap
+```sh
+# Debian
+sudo apt-get install -y libcap-dev
+# or clear linux
+sudo swupd bundle-add devpkg-libcap
+```

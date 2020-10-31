@@ -10,7 +10,7 @@ rm common-password
 ## Virtual machine
 https://docs.01.org/clearlinux/latest/get-started/virtual-machine-install/virt-manager.html
 
-### Debian
+### Debian 9
 ```sh
 echo "allow virbr0" | sudo tee /etc/qemu/bridge.conf
 ```
@@ -32,6 +32,32 @@ virt-install \
 ```sh
 virsh destroy guest1
 virsh undefine --domain guest1 --remove-all-storage --delete-snapshots
+```
+
+### Fedora 33
+```txt
+./anaconda-ks.cfg
+---
+autopart
+clearpart --initlabel
+keyboard --xlayouts=us
+lang en_US.UTF-8
+rootpw --lock
+timezone --utc Asia/Hong_Kong
+user --name whs --password harrypotter
+```
+
+```sh
+virt-install \
+  --name guest2 \
+  --memory 2048 \
+  --vcpus 2 \
+  --disk size=8 \
+  --network=bridge:virbr0 \
+  --location https://download.fedoraproject.org/pub/fedora/linux/releases/33/Server/x86_64/os \
+  --os-variant fedora33 \
+  --initrd-inject ./anaconda-ks.cfg \
+  --extra-args="init.ks=file:/anaconda-ks.cfg"
 ```
 
 ## Minijail

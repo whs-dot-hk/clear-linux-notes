@@ -62,7 +62,7 @@ virt-install \
   --location https://download.fedoraproject.org/pub/fedora/linux/releases/33/Server/x86_64/os \
   --os-variant fedora33 \
   --initrd-inject ./anaconda-ks.cfg \
-  --extra-args="init.ks=file:/anaconda-ks.cfg"
+  --extra-args="inst.ks=file:/anaconda-ks.cfg"
 ```
 
 ## Minijail

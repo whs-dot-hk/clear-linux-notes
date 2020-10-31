@@ -19,6 +19,8 @@ echo "allow virbr0" | sudo tee /etc/qemu/bridge.conf
 curl https://www.debian.org/releases/stretch/example-preseed.txt -o preseed.cfg
 ```
 
+[Example `preseed.cfg`](#appendix-a-example-preseedcfg)
+
 ```sh
 virt-install \
   --name guest1 \

@@ -137,7 +137,17 @@ sudo apt-get install -y libexpat-dev libreadline-dev
 ### Install perl modules
 ```sh
 cpan App::cpanminus
-cpanm Authen::OATH Clone Convert::Base32 Crypt::Rijndael File::KeePass Sort::Naturally Term::ReadKey Term::ReadLine::Gnu Term::ShellUI XML::Parser
+cpanm \
+  Authen::OATH \
+  Clone \
+  Convert::Base32 \
+  Crypt::Rijndael \
+  File::KeePass \
+  Sort::Naturally \
+  Term::ReadKey \
+  Term::ReadLine::Gnu \
+  Term::ShellUI \
+  XML::Parser
 ```
 
 ### Download kpcli

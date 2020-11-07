@@ -53,12 +53,13 @@ sudo virsh net-autostart default
 sudo virsh net-start default
 ```
 
-### Debian 9
+# Allow virbr0
 ```sh
 sudo mkdir -p /etc/qemu
 echo "allow virbr0" | sudo tee /etc/qemu/bridge.conf
 ```
 
+### Debian 9
 ```sh
 curl https://www.debian.org/releases/stretch/example-preseed.txt -o preseed.cfg
 ```

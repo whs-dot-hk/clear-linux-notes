@@ -7,6 +7,23 @@ sudo cp common-password /etc/pam.d
 rm common-password
 ```
 
+## Ansible
+```sh
+pip install --user --upgrade ansible
+```
+
+## Git
+```sh
+git config --global user.name whs
+git config --global user.email hswongac@gmail.com
+```
+
+## Firefox plugins
+https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers
+https://addons.mozilla.org/en-US/firefox/addon/noscript
+https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
+https://addons.mozilla.org/en-US/firefox/addon/umatrix
+
 ## Virtual machine
 https://docs.01.org/clearlinux/latest/get-started/virtual-machine-install/virt-manager.html
 

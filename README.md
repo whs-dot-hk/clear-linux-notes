@@ -53,7 +53,7 @@ sudo virsh net-autostart default
 sudo virsh net-start default
 ```
 
-# Allow virbr0
+### Allow virbr0
 ```sh
 sudo mkdir -p /etc/qemu
 echo "allow virbr0" | sudo tee /etc/qemu/bridge.conf

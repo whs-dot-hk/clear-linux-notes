@@ -19,10 +19,26 @@ git config --global user.email hswongac@gmail.com
 ```
 
 ## Firefox plugins
-https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers
-https://addons.mozilla.org/en-US/firefox/addon/noscript
-https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
-https://addons.mozilla.org/en-US/firefox/addon/umatrix
+* https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers
+* https://addons.mozilla.org/en-US/firefox/addon/noscript
+* https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
+* https://addons.mozilla.org/en-US/firefox/addon/umatrix
+
+## Patchelf
+```sh
+mkdir $HOME/my_patchelf
+git clone https://github.com/NixOS/patchelf.git
+cd patchelf
+./bootstrap.sh
+sh configure --prefix=$HOME/my_patchelf
+make -j8
+make check
+make install
+```
+
+```sh
+export PATH=$PATH:$HOME/my_patchelf/bin
+```
 
 ## Virtual machine
 https://docs.01.org/clearlinux/latest/get-started/virtual-machine-install/virt-manager.html

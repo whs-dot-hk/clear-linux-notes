@@ -38,7 +38,7 @@ install_bazel.yml
 ```
 
 ```sh
-ansible-playbook -i=localhost, -c=local install_bazel.yml -K
+ansible-playbook -i localhost, -c local install_bazel.yml -K
 ```
 
 ## Git

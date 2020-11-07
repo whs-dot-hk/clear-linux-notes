@@ -55,6 +55,7 @@ sudo virsh net-start default
 
 ### Debian 9
 ```sh
+sudo mkdir -p /etc/qemu
 echo "allow virbr0" | sudo tee /etc/qemu/bridge.conf
 ```
 

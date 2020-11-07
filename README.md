@@ -94,12 +94,12 @@ keyboard --xlayouts=us
 lang en_US.UTF-8
 rootpw --lock
 timezone --utc Asia/Hong_Kong
-user --name whs --password harrypotter
+user --name whs --password harrypotter --groups wheel
 ```
 
 ```sh
 virt-install \
-  --name guest2 \
+  --name fedora33 \
   --memory 2048 \
   --vcpus 2 \
   --disk size=8 \
@@ -108,6 +108,11 @@ virt-install \
   --os-variant fedora33 \
   --initrd-inject ./anaconda-ks.cfg \
   --extra-args="inst.ks=file:/anaconda-ks.cfg"
+```
+
+```sh
+virsh destroy fedora33
+virsh undefine --domain fedora33 --remove-all-storage --delete-snapshots
 ```
 
 ## Minijail

@@ -43,6 +43,16 @@ export PATH=$PATH:$HOME/my_patchelf/bin
 ## Virtual machine
 https://docs.01.org/clearlinux/latest/get-started/virtual-machine-install/virt-manager.html
 
+### Default network
+```sh
+# http://mirrors.fedoraproject.org
+curl -LO https://download.fedoraproject.org/pub/fedora/linux/releases/33/Everything/x86_64/os/Packages/l/libvirt-daemon-config-network-6.6.0-2.fc33.x86_64.rpm
+rpm2cpio libvirt-daemon-config-network-6.6.0-2.fc33.x86_64.rpm | cpio -iduv ./usr/share/libvirt/networks/default.xml
+sudo virsh net-define usr/share/libvirt/networks/default.xml
+sudo virsh net-autostart default
+sudo virsh net-start default
+```
+
 ### Debian 9
 ```sh
 echo "allow virbr0" | sudo tee /etc/qemu/bridge.conf

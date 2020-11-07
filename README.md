@@ -14,6 +14,7 @@ pip install --user --upgrade ansible
 
 ### Install bazel
 ```sh
+# Create install_bazel.yml
 cat - <(curl -sS https://raw.githubusercontent.com/whs-dot-hk/ansible-fedora-32/master/roles/bazel/tasks/main.yml | sed 's|^|  |') <<EOF > install_bazel.yml
 - name: Install bazel
   hosts: all

@@ -47,7 +47,16 @@ git config --global user.name whs
 git config --global user.email hswongac@gmail.com
 ```
 
-## Firefox plugins
+## Firefox
+### Run firefox
+```sh
+git clone https://github.com/whs-dot-hk/clear-linux-notes.git
+cd clear-linux-notes
+bazel build @ffmpeg//:library
+LD_LIBRARY_PATH=$(find -L bazel-out -type d -path "**/copy_*/*/lib" | sed -e ':a;N;$!ba;s|\n|:|g') firefox
+```
+
+### Plugins
 * https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers
 * https://addons.mozilla.org/en-US/firefox/addon/noscript
 * https://addons.mozilla.org/en-US/firefox/addon/ublock-origin

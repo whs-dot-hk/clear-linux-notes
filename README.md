@@ -51,6 +51,8 @@ rpm2cpio libvirt-daemon-config-network-6.6.0-2.fc33.x86_64.rpm | cpio -iduv ./us
 sudo virsh net-define usr/share/libvirt/networks/default.xml
 sudo virsh net-autostart default
 sudo virsh net-start default
+# Debug
+sudo brctl show
 ```
 
 ### Allow virbr0

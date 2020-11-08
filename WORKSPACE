@@ -1,5 +1,3 @@
-workspace(name = "rules_foreign_cc_usage_example")
-
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
@@ -33,4 +31,11 @@ new_git_repository(
     branch = "master",
     build_file = "@//:BUILD.ffmpeg",
     remote = "https://git.ffmpeg.org/ffmpeg.git",
+)
+
+http_archive(
+    name = "nasm",
+    build_file = "@//:BUILD.nasm",
+    strip_prefix = "nasm-2.15.05",
+    urls = ["https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/nasm-2.15.05.tar.gz"],
 )

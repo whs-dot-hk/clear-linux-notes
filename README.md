@@ -88,6 +88,7 @@ export PATH=$PATH:$HOME/my_patchelf/bin
 ```sh
 rm -rf $HOME/my_keepassxc
 mkdir $HOME/my_keepassxc
+cd $HOME/Downloads
 urls=(
   https://nrt.edge.kernel.org/fedora-buffet/fedora/linux/development/33/Everything/x86_64/os/Packages/l/libICE-1.0.10-4.fc33.x86_64.rpm
   https://nrt.edge.kernel.org/fedora-buffet/fedora/linux/development/33/Everything/x86_64/os/Packages/l/libSM-1.2.3-6.fc33.x86_64.rpm

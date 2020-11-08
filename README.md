@@ -53,7 +53,12 @@ git config --global user.email hswongac@gmail.com
 git clone https://github.com/whs-dot-hk/clear-linux-notes.git
 cd clear-linux-notes
 bazel build @ffmpeg//:library
-LD_LIBRARY_PATH=$(find -L bazel-out -type d -path "**/copy_*/*/lib" | sed -e ':a;N;$!ba;s|\n|:|g') firefox
+LD_LIBRARY_PATH=$(find -L bazel-out -type d -path **/copy_*/*/lib | sed -e ':a;N;$!ba;s|\n|:|g') firefox
+```
+
+```sh
+echo alias firefox='"'"LD_LIBRARY_PATH=\$(find -L `pwd`/bazel-out -type d -path **/copy_*/*/lib | sed -e ':a;N;\$!ba;s|\n|:|g') /usr/bin/firefox"'"' | sh
+firefox
 ```
 
 ### Plugins

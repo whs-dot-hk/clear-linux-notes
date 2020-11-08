@@ -57,7 +57,7 @@ LD_LIBRARY_PATH=$(find -L bazel-out -type d -path **/copy_*/*/lib | sed -e ':a;N
 ```
 
 ```sh
-echo alias firefox='"'"LD_LIBRARY_PATH=\$(find -L `pwd`/bazel-out -type d -path **/copy_*/*/lib | sed -e ':a;N;\$!ba;s|\n|:|g') /usr/bin/firefox"'"' | sh
+source <(echo alias firefox='"'"LD_LIBRARY_PATH=\$(find -L `pwd`/bazel-out -type d -path **/copy_*/*/lib | sed -e ':a;N;\$!ba;s|\n|:|g') /usr/bin/firefox"'"')
 firefox
 ```
 

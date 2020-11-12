@@ -1,0 +1,24 @@
+load("@rules_foreign_cc//tools/build_defs:configure.bzl", "configure_make")
+
+filegroup(
+    name = "all",
+    srcs = glob(["**"]),
+)
+
+configure_make(
+    name = "binary",
+    lib_source = ":all",
+    binaries = [
+        "patchelf",
+    ],
+    configure_in_place = True,
+    autogen = True,
+    autogen_command = "bootstrap.sh",
+)
+
+filegroup(
+    name = "patchelf",
+    srcs = [":binary"],
+    output_group = "patchelf",
+    visibility = ["//visibility:public"],
+)

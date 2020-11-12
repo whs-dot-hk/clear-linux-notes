@@ -1,0 +1,35 @@
+load("@rules_foreign_cc//tools/build_defs:cmake.bzl", "cmake_external")
+
+filegroup(
+    name = "all",
+    srcs = glob(["**"]),
+)
+
+keepassxc_prefix_script = "\n".join([
+    "tar -xzf $$EXT_BUILD_DEPS$$/bin/keepassxc_dependencies.tar.gz -C $$EXT_BUILD_DEPS$$/bin",
+    "patchelf --set-rpath $$EXT_BUILD_DEPS$$/bin/usr/lib64 $$EXT_BUILD_DEPS$$/bin/usr/lib64/qt5/bin/lrelease",
+])
+
+cmake_external(
+    name = "binary",
+    lib_source = ":all",
+    cache_entries = {
+        "WITH_XC_ALL": "OFF",
+        "CMAKE_PREFIX_PATH": "$$EXT_BUILD_DEPS$$/bin/usr",
+        "WITH_XC_DOCS": "OFF",
+    },
+    prefix_script = keepassxc_prefix_script,
+    make_commands = [
+        "grep -rl lX11 . | xargs sed -i 's|-lX11|'$$EXT_BUILD_DEPS$$'/bin/usr/lib64/libX11.so.6|g'",
+        "make",
+        "make install",
+    ],
+    binaries = [
+        "keepassxc",
+    ],
+    tools_deps = [
+        "@patchelf//:patchelf",
+        "@//:keepassxc_dependencies.tar.gz",
+    ],
+    visibility = ["//visibility:public"],
+)

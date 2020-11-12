@@ -144,10 +144,18 @@ cmake -DWITH_XC_ALL=OFF -DCMAKE_PREFIX_PATH=$HOME/my_keepassxc/usr -DWITH_XC_DOC
 grep -rl lX11 . | xargs sed -i 's|-lX11|'$HOME'/my_keepassxc/usr/lib64/libX11.so.6|g'
 make -j8
 ```
+or
+```sh
+bazel build @keepassxc//:binary
+```
 
 ### Run keepassxc
 ```sh
 LD_LIBRARY_PATH=$HOME/my_keepassxc/usr/lib64 QT_DEBUG_PLUGINS=1 QT_PLUGIN_PATH=$HOME/my_keepassxc/usr/lib64/qt5/plugins $HOME/keepassxc/build/src/keepassxc
+```
+or
+```sh
+LD_LIBRARY_PATH=$HOME/my_keepassxc/usr/lib64 QT_DEBUG_PLUGINS=1 QT_PLUGIN_PATH=$HOME/my_keepassxc/usr/lib64/qt5/plugins bazel-bin/external/keepassxc/binary/bin/keepassxc
 ```
 
 ## Virtual machine

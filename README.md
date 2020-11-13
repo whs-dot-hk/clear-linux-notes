@@ -46,7 +46,7 @@ ansible-playbook -i localhost, -c local install_bazel.yml -K
 export PATH=$PATH:/usr/local/go/bin
 ```
 
-### Buildifier
+### Install bazel buildifier
 ```sh
 go get github.com/bazelbuild/buildtools/buildifier
 ```

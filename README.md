@@ -188,7 +188,7 @@ curl https://www.debian.org/releases/stretch/example-preseed.txt -o preseed.cfg
 
 ```sh
 virt-install \
-  --name guest1 \
+  --name debian9 \
   --memory 2048 \
   --vcpus 2 \
   --disk size=8 \
@@ -200,8 +200,8 @@ virt-install \
 ```
 
 ```sh
-virsh destroy guest1
-virsh undefine --domain guest1 --remove-all-storage --delete-snapshots
+virsh destroy debian9
+virsh undefine --domain debian9 --remove-all-storage --delete-snapshots
 ```
 
 ### Fedora 33

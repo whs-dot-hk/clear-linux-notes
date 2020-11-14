@@ -54,6 +54,20 @@ new_git_repository(
     remote = "https://github.com/keepassxreboot/keepassxc.git",
 )
 
+http_archive(
+    name = "sshpass",
+    build_file = "@//:BUILD.sshpass",
+    strip_prefix = "sshpass-1.06",
+    urls = ["https://sourceforge.net/projects/sshpass/files/sshpass/1.06/sshpass-1.06.tar.gz"],
+)
+
+http_archive(
+    name = "rsync",
+    build_file = "@//:BUILD.rsync",
+    strip_prefix = "rsync-3.2.3",
+    urls = ["https://download.samba.org/pub/rsync/src/rsync-3.2.3.tar.gz"],
+)
+
 load("//:deps.bzl", "keepassxc_deps")
 
 keepassxc_deps()

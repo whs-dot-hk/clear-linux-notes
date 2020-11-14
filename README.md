@@ -51,6 +51,16 @@ export PATH=$PATH:/usr/local/go/bin
 go get github.com/bazelbuild/buildtools/buildifier
 ```
 
+## Yarn
+```sh
+export PATH=$PATH:$HOME/.yarn/bin
+```
+
+## Docker
+```sh
+sudo usermod -aG docker whs
+```
+
 ## Git
 ```sh
 git config --global user.name whs
@@ -214,6 +224,10 @@ virsh destroy debian9
 virsh undefine --domain debian9 --remove-all-storage --delete-snapshots
 ```
 
+```sh
+sudo virsh net-dhcp-leases default
+```
+
 ### Fedora 33
 ```txt
 anaconda-ks.cfg
@@ -259,13 +273,25 @@ sudo swupd bundle-add devpkg-libcap
 
 ### Install development packages
 ```sh
-sudo apt-get install -y libexpat-dev libreadline-dev
+sudo apt-get install -y \
+  build-essential \
+  libexpat-dev \
+  libreadline-dev
 ```
 
 ### Install perl modules
 ```sh
-cpan App::cpanminus
-cpanm \
+curl -L https://cpanmin.us/ -o cpanm
+chmod +x cpanm
+```
+
+```sh
+./cpanm --local-lib=~/perl5 local::lib
+eval $(perl -I$HOME/perl5/lib/perl5/ -Mlocal::lib)
+```
+
+```sh
+./cpanm \
   Authen::OATH \
   Clone \
   Convert::Base32 \

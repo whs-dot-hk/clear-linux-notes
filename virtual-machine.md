@@ -74,7 +74,7 @@ virt-install \
   --vcpus 2 \
   --disk size=8 \
   --network=bridge:virbr0 \
-  --location https://download.fedoraproject.org/pub/fedora/linux/releases/33/Server/x86_64/os \
+  --location https://nrt.edge.kernel.org/fedora-buffet/fedora/linux/releases/33/Server/x86_64/os \
   --os-variant fedora33 \
   --initrd-inject ./anaconda-ks.cfg \
   --extra-args="inst.ks=file:/anaconda-ks.cfg"

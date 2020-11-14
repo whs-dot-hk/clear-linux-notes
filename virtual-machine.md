@@ -1,7 +1,7 @@
-## Virtual machine
+# Virtual machine
 https://docs.01.org/clearlinux/latest/get-started/virtual-machine-install/virt-manager.html
 
-### Default network
+## Default network
 https://wiki.libvirt.org/page/Networking
 
 ```sh
@@ -15,13 +15,13 @@ sudo virsh net-start default
 sudo brctl show
 ```
 
-### Allow virbr0
+## Allow virbr0
 ```sh
 sudo mkdir -p /etc/qemu
 echo "allow virbr0" | sudo tee /etc/qemu/bridge.conf
 ```
 
-### List resources
+## List resources
 ```sh
 # List domains
 virsh list --all
@@ -29,8 +29,8 @@ virsh list --all
 sudo virsh net-dhcp-leases default
 ```
 
-### Debian 9
-#### Preseed
+## Debian 9
+### Preseed
 https://wiki.debian.org/DebianInstaller/Preseed
 
 ```sh
@@ -61,8 +61,8 @@ virsh undefine --domain debian9 --remove-all-storage --delete-snapshots #--manag
 virsh start debian9
 ```
 
-### Fedora 33
-#### Pykickstart
+## Fedora 33
+### Pykickstart
 https://pykickstart.readthedocs.io/en/latest/kickstart-docs.html
 
 ```txt
@@ -95,7 +95,7 @@ virsh destroy fedora33
 virsh undefine --domain fedora33 --remove-all-storage --delete-snapshots
 ```
 
-## Appendix A. Example `preseed.cfg`
+# Appendix A. Example `preseed.cfg`
 ```txt
 preseed.cfg
 ---

@@ -2,6 +2,8 @@
 https://docs.01.org/clearlinux/latest/get-started/virtual-machine-install/virt-manager.html
 
 ### Default network
+https://wiki.libvirt.org/page/Networking
+
 ```sh
 # http://mirrors.fedoraproject.org
 curl -O https://nrt.edge.kernel.org/fedora-buffet/fedora/linux/releases/33/Everything/x86_64/os/Packages/l/libvirt-daemon-config-network-6.6.0-2.fc33.x86_64.rpm
@@ -30,6 +32,7 @@ sudo virsh net-dhcp-leases default
 ### Debian 9
 #### Preseed
 https://wiki.debian.org/DebianInstaller/Preseed
+
 ```sh
 curl https://www.debian.org/releases/stretch/example-preseed.txt -o preseed.cfg
 ```

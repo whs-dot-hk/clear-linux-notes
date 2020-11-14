@@ -40,18 +40,11 @@ firefox
 
 ## Patchelf
 ```sh
-mkdir $HOME/my_patchelf
-git clone https://github.com/NixOS/patchelf.git
-cd patchelf
-./bootstrap.sh
-sh configure --prefix=$HOME/my_patchelf
-make -j8
-make check
-make install
+bazel build @patchelf//:patchelf
 ```
 
 ```sh
-export PATH=$PATH:$HOME/my_patchelf/bin
+export PATH=$PATH:$(pwd)/bazel-bin/external/patchelf/binary/bin
 ```
 
 ## Keepassxc

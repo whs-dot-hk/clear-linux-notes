@@ -19,9 +19,11 @@ sudo mkdir -p /etc/qemu
 echo "allow virbr0" | sudo tee /etc/qemu/bridge.conf
 ```
 
-### List domains and leases
+### List resources
 ```sh
+# List domains
 virsh list --all
+# List dhcp leases
 sudo virsh net-dhcp-leases default
 ```
 

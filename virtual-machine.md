@@ -28,6 +28,8 @@ sudo virsh net-dhcp-leases default
 ```
 
 ### Debian 9
+#### Preseed
+https://wiki.debian.org/DebianInstaller/Preseed
 ```sh
 curl https://www.debian.org/releases/stretch/example-preseed.txt -o preseed.cfg
 ```
@@ -57,6 +59,9 @@ virsh start debian9
 ```
 
 ### Fedora 33
+#### Pykickstart
+https://pykickstart.readthedocs.io/en/latest/kickstart-docs.html
+
 ```txt
 anaconda-ks.cfg
 ---

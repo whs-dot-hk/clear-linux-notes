@@ -7,55 +7,6 @@ sudo cp common-password /etc/pam.d
 rm common-password
 ```
 
-## Ansible
-```sh
-pip install --user --upgrade ansible
-```
-
-### Install bazel
-```sh
-# Create install_bazel.yml
-cat - <(curl -sS https://raw.githubusercontent.com/whs-dot-hk/ansible-fedora-32/master/roles/bazel/tasks/main.yml | sed 's|^|  |') <<EOF > install_bazel.yml
-- name: Install bazel
-  hosts: all
-  tasks:
-EOF
-```
-
-```yaml
-install_bazel.yml
----
-- name: Install bazel
-  hosts: all
-  tasks:
-  - become: "yes"
-    get_url:
-      dest: /usr/local/bin/bazel
-      mode: "0755"
-      url: >-
-        https://github.com/bazelbuild/bazel/releases/download/3.7.0/bazel-3.7.0-linux-x86_64
-    name: Install bazel
-```
-
-```sh
-ansible-playbook -i localhost, -c local install_bazel.yml -K
-```
-
-## Golang
-```sh
-export PATH=$PATH:/usr/local/go/bin
-```
-
-### Install bazel buildifier
-```sh
-go get github.com/bazelbuild/buildtools/buildifier
-```
-
-## Yarn
-```sh
-export PATH=$PATH:$HOME/.yarn/bin
-```
-
 ## Docker
 ```sh
 sudo usermod -aG docker whs

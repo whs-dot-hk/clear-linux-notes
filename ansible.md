@@ -4,6 +4,14 @@
 pip install --user --upgrade ansible
 ```
 
+```sh
+export PATH=$PATH:$HOME/.local/bin
+```
+
+```sh
+sudo mkdir -p /usr/local/bin
+```
+
 ## Install bazel
 ```sh
 # Create install_bazel.yml
@@ -14,22 +22,21 @@ cat - <(curl -sS https://raw.githubusercontent.com/whs-dot-hk/ansible-fedora-32/
 EOF
 ```
 
-### Example `install_bazel.yml`
-```yaml
-- name: Install bazel
+```sh
+ansible-playbook -i localhost, -c local install_bazel.yml -K
+```
+
+## Install borgbackup
+```sh
+cat - <(curl -sS https://raw.githubusercontent.com/whs-dot-hk/ansible-fedora-32/master/roles/borgbackup/tasks/main.yml | sed 's|^|  |') <<EOF > install_borgbackup.yml
+- name: Install borgbackup
   hosts: all
   tasks:
-  - become: "yes"
-    get_url:
-      dest: /usr/local/bin/bazel
-      mode: "0755"
-      url: >-
-        https://github.com/bazelbuild/bazel/releases/download/3.7.0/bazel-3.7.0-linux-x86_64
-    name: Install bazel
+EOF
 ```
 
 ```sh
-ansible-playbook -i localhost, -c local install_bazel.yml -K
+ansible-playbook -i localhost, -c local install_borgbackup.yml -K
 ```
 
 ## Install golang

@@ -22,6 +22,8 @@ cat - <(curl -sS https://raw.githubusercontent.com/whs-dot-hk/ansible-fedora-32/
 EOF
 ```
 
+[Appendix A. Example `install_bazel.yml`](#appendix-a-example-install_bazelyml)
+
 ```sh
 ansible-playbook -i localhost, -c local install_bazel.yml -K
 ```
@@ -76,4 +78,18 @@ ansible-playbook -i localhost, -c local install_yarn.yml -K
 
 ```sh
 export PATH=$PATH:$HOME/.yarn/bin
+```
+
+# Appendix A. Example `install_bazel.yml`
+```yaml
+- name: install bazel
+  hosts: all
+  tasks:
+  - become: "yes"
+    get_url:
+      dest: /usr/local/bin/bazel
+      mode: "0755"
+      url: >-
+        https://github.com/bazelbuild/bazel/releases/download/3.7.0/bazel-3.7.0-linux-x86_64
+    name: install bazel
 ```

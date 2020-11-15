@@ -37,7 +37,7 @@ https://wiki.debian.org/DebianInstaller/Preseed
 curl https://www.debian.org/releases/stretch/example-preseed.txt -o preseed.cfg
 ```
 
-[Appendix A. Example `preseed.cfg`](#appendix-a-example-preseedcfg)
+[Appendix A. Example `preseed.cfg`](#user-content-appendix-a-example-preseedcfg)
 
 ```sh
 virt-install \

@@ -22,7 +22,7 @@ cat - <(curl -sS https://raw.githubusercontent.com/whs-dot-hk/ansible-fedora-32/
 EOF
 ```
 
-[Appendix A. Example `install_bazel.yml`](#appendix-a-example-install_bazelyml)
+[Appendix A. Example `install_bazel.yml`](#user-content-appendix-a-example-install_bazelyml)
 
 ```sh
 ansible-playbook -i localhost, -c local install_bazel.yml -K

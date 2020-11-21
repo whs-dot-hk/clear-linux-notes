@@ -26,7 +26,7 @@ firefox
 ## Cookie autodelete
 | Site | Keep cookie |
 | --- | --- |
-| Youtube | `__Secure-3PAPISID`, `__Secure-3PSID`, `__Secure-3PSIDCC` |
+| Youtube | `__Secure-3PAPISID`, `__Secure-3PSID` and `__Secure-3PSIDCC` |
 
 ## Umatrix rules
 ```txt

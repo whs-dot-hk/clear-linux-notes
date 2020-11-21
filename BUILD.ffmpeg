@@ -27,8 +27,5 @@ configure_make(
         "libswresample.so",
         "libswscale.so",
     ],
-    tools_deps = [
-        "@nasm//:nasm",
-    ],
     visibility = ["//visibility:public"],
 )

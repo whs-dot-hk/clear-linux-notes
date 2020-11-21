@@ -34,8 +34,5 @@ configure_make(
     shared_libraries = [
         "libx264.so",
     ],
-    tools_deps = [
-        "@nasm//:nasm",
-    ],
     visibility = ["//visibility:public"],
 )

@@ -23,6 +23,16 @@ firefox
 * https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
 * https://addons.mozilla.org/en-US/firefox/addon/umatrix
 
+## Cookie autodelete
+| Site | Keep cookie |
+| --- | --- |
+| Youtube | `__Secure-3PAPISID`, `__Secure-3PSID`, `__Secure-3PSIDCC` |
+
+## Umatrix
+```txt
+youtube.com googlevideo.com xhr allow
+```
+
 ## User.js
 https://github.com/arkenfox/user.js
 

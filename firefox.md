@@ -25,3 +25,6 @@ firefox
 
 ## User.js
 https://github.com/arkenfox/user.js
+
+## Tor
+https://www.torproject.org/download

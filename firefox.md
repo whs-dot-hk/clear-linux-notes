@@ -28,7 +28,7 @@ firefox
 | --- | --- |
 | Youtube | `__Secure-3PAPISID`, `__Secure-3PSID`, `__Secure-3PSIDCC` |
 
-## Umatrix
+## Umatrix rules
 ```txt
 youtube.com googlevideo.com xhr allow
 ```

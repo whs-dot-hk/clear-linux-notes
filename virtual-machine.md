@@ -70,6 +70,7 @@ virsh undefine --domain debian9 --remove-all-storage --delete-snapshots #--manag
 
 ```sh
 virsh start debian9
+virt-viewer debian9
 ```
 
 ## Fedora 33

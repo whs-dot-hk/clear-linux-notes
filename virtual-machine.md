@@ -1,6 +1,16 @@
 # Virtual machine
 https://docs.01.org/clearlinux/latest/get-started/virtual-machine-install/virt-manager.html
 
+```sh
+sudo swupd bundle-add virt-manager-gui
+
+sudo usermod -aG kvm whs
+sudo usermod -aG libvirt whs
+
+sudo systemctl enable libvirtd
+reboot
+```
+
 ## Default network
 https://wiki.libvirt.org/page/Networking
 

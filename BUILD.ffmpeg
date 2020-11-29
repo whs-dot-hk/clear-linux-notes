@@ -29,3 +29,28 @@ configure_make(
     ],
     visibility = ["//visibility:public"],
 )
+
+configure_make(
+    name = "mpv_library",
+    lib_source = ":all",
+    configure_options = [
+        "--enable-cuda-nvcc",
+        "--enable-nonfree",
+        "--nvcc=/opt/cuda/bin/nvcc",
+        "--nvccflags=--gpu-architecture=compute_61\ --gpu-code=sm_61",
+        "--enable-nvdec",
+    ],
+    static_libraries = [
+        "libavcodec.a",
+        "libavdevice.a",
+        "libavfilter.a",
+        "libavformat.a",
+        "libavutil.a",
+        "libswresample.a",
+        "libswscale.a",
+    ],
+    deps = [
+        "@nv_codec_headers//:headers",
+    ],
+    visibility = ["//visibility:public"],
+)

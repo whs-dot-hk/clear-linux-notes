@@ -7,6 +7,13 @@ sudo cp common-password /etc/pam.d
 rm common-password
 ```
 
+## Sdks
+```sh
+sudo swupd bundle-add \
+  kernel-native-dkms \
+  os-clr-on-clr
+```
+
 ## Docker
 ```sh
 sudo usermod -aG docker whs

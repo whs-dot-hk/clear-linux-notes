@@ -1,0 +1,40 @@
+load("@rules_foreign_cc//tools/build_defs:configure.bzl", "configure_make")
+
+filegroup(
+    name = "all",
+    srcs = glob(["**"]) + [
+        "//:configure",
+    ],
+)
+
+genrule(
+    name = "my_configure",
+    outs = ["configure"],
+    cmd = "echo 'waf configure --prefix=$$BUILD_TMPDIR/$$INSTALL_PREFIX' > $@",
+)
+
+prefix_script = """
+find -L $$EXT_BUILD_ROOT$$/bazel-out -type f -name configure -exec sh -c "cp {} $$EXT_BUILD_ROOT$$/external/mpv/configure" \;
+##define_absolute_paths## $$EXT_BUILD_ROOT$$ $$EXT_BUILD_DEPS$$
+"""
+
+configure_make(
+    name = "binary",
+    lib_source = ":all",
+    binaries = [
+        "mpv",
+    ],
+    deps = [
+        "@ffmpeg//:mpv_library",
+    ],
+    configure_in_place = True,
+    prefix_script = prefix_script,
+    make_commands = [
+        "waf",
+        "waf install",
+    ],
+    visibility = ["//visibility:public"],
+    tools_deps = [
+        "@waf//file",
+    ],
+)

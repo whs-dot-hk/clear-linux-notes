@@ -1,4 +1,4 @@
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file")
 
 http_archive(
     name = "rules_foreign_cc",
@@ -66,6 +66,20 @@ new_git_repository(
     branch = "master",
     build_file = "@//:BUILD.nv_codec_headers",
     remote = "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
+)
+
+new_git_repository(
+    name = "mpv",
+    branch = "master",
+    build_file = "@//:BUILD.mpv",
+    remote = "https://github.com/mpv-player/mpv.git",
+)
+
+http_file(
+    name = "waf",
+    urls = ["https://waf.io/waf-2.0.21"],
+    executable = True,
+    downloaded_file_path = "waf",
 )
 
 load("//:deps.bzl", "keepassxc_deps")

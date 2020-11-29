@@ -6,11 +6,11 @@ bazel build @ffmpeg//:library
 ```
 
 ```sh
-LD_LIBRARY_PATH=$(find -L bazel-out -type d -path **/copy_*/*/lib | sed -e ':a;N;$!ba;s|\n|:|g') firefox
+LD_LIBRARY_PATH=$(find -L bazel-out -type d -path **/copy_library/*/lib | sed -e ':a;N;$!ba;s|\n|:|g') firefox
 ```
 or
 ```sh
-source <(echo alias firefox='"'"LD_LIBRARY_PATH=\$(find -L `pwd`/bazel-out -type d -path **/copy_*/*/lib | sed -e ':a;N;\$!ba;s|\n|:|g') /usr/bin/firefox"'"')
+source <(echo alias firefox='"'"LD_LIBRARY_PATH=\$(find -L `pwd`/bazel-out -type d -path **/copy_library/*/lib | sed -e ':a;N;\$!ba;s|\n|:|g') /usr/bin/firefox"'"')
 firefox
 ```
 

@@ -14,7 +14,9 @@ genrule(
 )
 
 prefix_script = """
+# Copy configure
 find -L $$EXT_BUILD_ROOT$$/bazel-out -type f -name configure -exec sh -c "cp {} $$EXT_BUILD_ROOT$$/external/mpv/configure" \;
+# Replace EXT_BUILD_DEPS
 ##define_absolute_paths## $$EXT_BUILD_ROOT$$ $$EXT_BUILD_DEPS$$
 """
 

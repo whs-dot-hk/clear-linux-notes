@@ -33,13 +33,6 @@ new_git_repository(
     remote = "https://git.ffmpeg.org/ffmpeg.git",
 )
 
-http_archive(
-    name = "nasm",
-    build_file = "@//:BUILD.nasm",
-    strip_prefix = "nasm-2.15.05",
-    urls = ["https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/nasm-2.15.05.tar.gz"],
-)
-
 new_git_repository(
     name = "patchelf",
     branch = "master",

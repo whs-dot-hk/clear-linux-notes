@@ -1,0 +1,13 @@
+load("@rules_foreign_cc//tools/build_defs:make.bzl", "make")
+
+filegroup(
+    name = "all",
+    srcs = glob(["**"]),
+)
+
+make(
+    name = "headers",
+    lib_source = ":all",
+    headers_only = True,
+    visibility = ["//visibility:public"],
+)

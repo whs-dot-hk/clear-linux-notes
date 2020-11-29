@@ -61,6 +61,13 @@ http_archive(
     urls = ["https://download.samba.org/pub/rsync/src/rsync-3.2.3.tar.gz"],
 )
 
+new_git_repository(
+    name = "nv_codec_headers",
+    branch = "master",
+    build_file = "@//:BUILD.nv_codec_headers",
+    remote = "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
+)
+
 load("//:deps.bzl", "keepassxc_deps")
 
 keepassxc_deps()

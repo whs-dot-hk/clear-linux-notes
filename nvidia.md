@@ -49,7 +49,7 @@ cd ..
 vim linux.spec
 ```
 
-```rpm spec
+```rpm
 linux.spec
 ---
 Patch2001: 2001-My-patch.patch

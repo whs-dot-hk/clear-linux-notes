@@ -1,4 +1,8 @@
 ```sh
+sudo apt-get install -y openjdk-8-jre
+```
+
+```sh
 # https://www.jenkins.io/download
 curl -OL https://get.jenkins.io/war-stable/2.263.1/jenkins.war
 # https://github.com/jenkinsci/plugin-installation-manager-tool

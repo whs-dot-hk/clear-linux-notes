@@ -9,6 +9,18 @@ curl -OL https://get.jenkins.io/war-stable/2.263.1/jenkins.war
 curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.4.0/jenkins-plugin-manager-2.4.0.jar
 ```
 
+# Plugins
+| Name | Url |
+| --- | --- |
+| configuration-as-code | https://plugins.jenkins.io/configuration-as-code |
+| credentials-binding | https://plugins.jenkins.io/credentials-binding |
+| docker-workflow | https://plugins.jenkins.io/docker-workflow |
+| git | https://plugins.jenkins.io/git |
+| github-branch-source | https://plugins.jenkins.io/github-branch-source |
+| job-dsl | https://plugins.jenkins.io/job-dsl |
+| workflow-aggregator | https://plugins.jenkins.io/workflow-aggregator |
+| workflow-multibranch | https://plugins.jenkins.io/workflow-multibranch |
+
 ```sh
 mkdir -p .jenkins/plugins
 tee plugins.txt > /dev/null <<EOF
@@ -23,6 +35,9 @@ workflow-multibranch
 EOF
 java -jar jenkins-plugin-manager-2.4.0.jar --war ./jenkins.war --plugin-file plugins.txt -d .jenkins/plugins # install plugins
 ```
+
+# Jcasc
+https://github.com/jenkinsci/configuration-as-code-plugin
 
 ```sh
 mkdir -p .jenkins/casc_configs

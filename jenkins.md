@@ -10,7 +10,7 @@ curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/
 ```
 
 # Plugins
-| Name | Url |
+| Plugin | Url |
 | --- | --- |
 | configuration-as-code | https://plugins.jenkins.io/configuration-as-code |
 | credentials-binding | https://plugins.jenkins.io/credentials-binding |

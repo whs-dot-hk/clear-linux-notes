@@ -26,8 +26,12 @@ java -jar jenkins-plugin-manager-2.4.0.jar --war ./jenkins.war --plugin-file plu
 
 ```sh
 mkdir -p .jenkins/casc_configs
+tee .jenkins/casc_configs/jcasc.yaml > /dev/null <<EOF
+jenkins:
+  systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code plugin\n\n"
+EOF
 ```
 
 ```sh
-java -Djenkins.install.runSetupWizard=false -Dcasc.jenkins.config=/home/whs/.jenkins/casc_configs/jcasc.yaml -jar jenkins.war # run jenkins
+java -Djenkins.install.runSetupWizard=false -Dcasc.jenkins.config=.jenkins/casc_configs/jcasc.yaml -jar jenkins.war # run jenkins
 ```

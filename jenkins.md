@@ -25,15 +25,22 @@ curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/
 mkdir -p .jenkins/plugins
 tee plugins.txt > /dev/null <<EOF
 configuration-as-code
-credentials-binding
-docker-workflow
-git
-github-branch-source
-job-dsl
-workflow-aggregator
-workflow-multibranch
+#credentials-binding
+#docker-workflow
+#git
+#github-branch-source
+#job-dsl
+#workflow-aggregator
+#workflow-multibranch
 EOF
+(
+plugins=$(wc -l < plugins.txt)
+for i in $(seq 1 $plugins)
+do
 java -jar jenkins-plugin-manager-2.4.0.jar --war ./jenkins.war --plugin-file plugins.txt -d .jenkins/plugins # install plugins
+sed -i '0,/#/ s/#//' plugins.txt
+done
+)
 ```
 
 # Jcasc

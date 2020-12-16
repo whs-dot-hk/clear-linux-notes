@@ -3,7 +3,7 @@
 ```
 
 # Insert before `<C-v>...0...I`
-Assume cursor is on the second i of `configuration-as-code`
+Assume cursor is on the second `i` of `configuration-as-code`
 
 ```
 configuration-as-code

@@ -2,21 +2,10 @@ load("@rules_foreign_cc//tools/build_defs:configure.bzl", "configure_make")
 
 filegroup(
     name = "all",
-    srcs = glob(["**"]) + [
-        "//:configure",
-    ],
-)
-
-genrule(
-    name = "my_configure",
-    outs = ["configure"],
-    cmd = "echo 'waf configure --prefix=$$BUILD_TMPDIR/$$INSTALL_PREFIX' > $@",
+    srcs = glob(["**"]),
 )
 
 prefix_script = """
-# Copy configure
-find -L $$EXT_BUILD_ROOT$$/bazel-out -type f -name configure -exec sh -c "cp {} $$EXT_BUILD_ROOT$$/external/mpv/configure" \;
-# Replace EXT_BUILD_DEPS
 ##define_absolute_paths## $$EXT_BUILD_ROOT$$ $$EXT_BUILD_DEPS$$
 """
 
@@ -31,6 +20,7 @@ configure_make(
     ],
     configure_in_place = True,
     prefix_script = prefix_script,
+    configure_command = "waf configure",
     make_commands = [
         "waf",
         "waf install",

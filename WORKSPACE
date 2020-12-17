@@ -1,16 +1,10 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file")
 
 http_archive(
-    name = "rules_foreign_cc",
-    patch_args = [
-        "-p1",
-    ],
-    patch_tool = "/usr/bin/patch",
-    patches = [
-        "//:0001-Add-attribure-prefix_script-and-example.patch",
-    ],
-    strip_prefix = "rules_foreign_cc-d54c78ab86b40770ee19f0949db9d74a831ab9f0",
-    url = "https://github.com/bazelbuild/rules_foreign_cc/archive/d54c78ab86b40770ee19f0949db9d74a831ab9f0.zip",
+   name = "rules_foreign_cc",
+   strip_prefix = "whs_rules_foreign_cc-master",
+   url = "https://github.com/whs-dot-hk/whs_rules_foreign_cc/archive/master.zip",
+   sha256 = "98ab624a111597aaba4954f22d2b3e6b6e5b49023fc0cee6a9c27d08888af97e",
 )
 
 load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependencies")

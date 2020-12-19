@@ -115,13 +115,13 @@ EOF
 ```
 
 ```sh
-curl -O https://download.nvidia.com/XFree86/Linux-x86_64/455.28/NVIDIA-Linux-x86_64-455.28.run
+curl -O https://download.nvidia.com/XFree86/Linux-x86_64/460.27.04/NVIDIA-Linux-x86_64-460.27.04.run
 ```
 
 ```sh
 # Save the install cmd before reboot
 tee ~/install_nvidia.sh <<EOF > /dev/null
-sudo sh NVIDIA-Linux-x86_64-455.28.run \
+sudo sh NVIDIA-Linux-x86_64-460.27.04.run \
 --utility-prefix=/opt/nvidia \
 --opengl-prefix=/opt/nvidia \
 --compat32-prefix=/opt/nvidia \
@@ -159,11 +159,11 @@ sudo ln -s /usr/bin/g++-8 /usr/local/cuda/bin/g++
 ```
 
 ```sh
-curl -O https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda_11.1.0_455.23.05_linux.run
+curl -O https://developer.download.nvidia.com/compute/cuda/11.2.0/local_installers/cuda_11.2.0_460.27.04_linux.run
 ```
 
 ```sh
-sudo sh cuda_11.1.0_455.23.05_linux.run \
+sudo sh cuda_11.2.0_460.27.04_linux.run \
 --toolkit \
 --installpath=/opt/cuda \
 --no-man-page \

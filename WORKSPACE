@@ -4,7 +4,6 @@ http_archive(
    name = "rules_foreign_cc",
    strip_prefix = "whs_rules_foreign_cc-master",
    url = "https://github.com/whs-dot-hk/whs_rules_foreign_cc/archive/master.zip",
-   sha256 = "98ab624a111597aaba4954f22d2b3e6b6e5b49023fc0cee6a9c27d08888af97e",
 )
 
 load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependencies")

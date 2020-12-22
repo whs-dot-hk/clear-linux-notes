@@ -9,11 +9,11 @@ bazel build @ffmpeg//:firefox_library
 
 # Run firefox
 ```sh
-LD_LIBRARY_PATH=$(find -L bazel-out -type d -path **/copy_firefox_*/*/lib | sed -e ':a;N;$!ba;s|\n|:|g') firefox
+LD_LIBRARY_PATH=$(find -L bazel-out -type d -path **/copy_firefox_*/*/lib | sed -e ':x ; N ; s/\n/:/g ; bx') firefox
 ```
 or
 ```sh
-source <(echo alias firefox='"'"LD_LIBRARY_PATH=\$(find -L `pwd`/bazel-out -type d -path **/copy_firefox_*/*/lib | sed -e ':a;N;\$!ba;s|\n|:|g') /usr/bin/firefox"'"')
+source <(echo alias firefox='"'"LD_LIBRARY_PATH=\$(find -L `pwd`/bazel-out -type d -path **/copy_firefox_*/*/lib | sed -e ':x ; N ; s/\n/:/g ; bx') /usr/bin/firefox"'"')
 firefox
 ```
 

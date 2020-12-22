@@ -1,20 +1,23 @@
-# Firefox
-
-## Run firefox
 ```sh
-bazel build @ffmpeg//:library
+sh start_firefox.sh
 ```
 
+# Build firefox
 ```sh
-LD_LIBRARY_PATH=$(find -L bazel-out -type d -path **/copy_library/*/lib | sed -e ':a;N;$!ba;s|\n|:|g') firefox
+bazel build @ffmpeg//:firefox_library
+```
+
+# Run firefox
+```sh
+LD_LIBRARY_PATH=$(find -L bazel-out -type d -path **/copy_firefox_*/*/lib | sed -e ':a;N;$!ba;s|\n|:|g') firefox
 ```
 or
 ```sh
-source <(echo alias firefox='"'"LD_LIBRARY_PATH=\$(find -L `pwd`/bazel-out -type d -path **/copy_library/*/lib | sed -e ':a;N;\$!ba;s|\n|:|g') /usr/bin/firefox"'"')
+source <(echo alias firefox='"'"LD_LIBRARY_PATH=\$(find -L `pwd`/bazel-out -type d -path **/copy_firefox_*/*/lib | sed -e ':a;N;\$!ba;s|\n|:|g') /usr/bin/firefox"'"')
 firefox
 ```
 
-## Plugins
+# Plugins
 * https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete
 * https://addons.mozilla.org/en-US/firefox/addon/decentraleyes
 * https://addons.mozilla.org/en-US/firefox/addon/https-everywhere
@@ -23,18 +26,18 @@ firefox
 * https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
 * https://addons.mozilla.org/en-US/firefox/addon/umatrix
 
-## Cookie autodelete
+# Cookie autodelete
 | Site | Keep cookie |
 | --- | --- |
 | Youtube | `__Secure-3PAPISID`, `__Secure-3PSID` and `__Secure-3PSIDCC` |
 
-## Umatrix rules
+# Umatrix rules
 ```txt
 youtube.com googlevideo.com xhr allow
 ```
 
-## User.js
+# User.js
 https://github.com/arkenfox/user.js
 
-## Tor
+# Tor
 https://www.torproject.org/download

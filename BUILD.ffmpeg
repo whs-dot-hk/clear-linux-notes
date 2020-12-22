@@ -6,7 +6,7 @@ filegroup(
 )
 
 configure_make(
-    name = "library",
+    name = "firefox_library",
     lib_source = ":all",
     configure_options = [
         "--disable-static",
@@ -15,7 +15,7 @@ configure_make(
         "--enable-gpl",
     ],
     deps = [
-        "@x264//:library",
+        "@x264//:firefox_library",
     ],
     shared_libraries = [
         "libavcodec.so",

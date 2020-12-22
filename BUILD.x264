@@ -24,7 +24,7 @@ find -L $$EXT_BUILD_ROOT$$ -type f -name "*.modified" -exec sh -c "cp {} $$EXT_B
 """
 
 configure_make(
-    name = "library",
+    name = "firefox_library",
     lib_source = ":all",
     configure_options = [
         "--enable-shared",

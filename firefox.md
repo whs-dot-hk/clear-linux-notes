@@ -18,6 +18,7 @@ firefox
 ```
 
 # Plugins
+## Privacy
 * https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete
 * https://addons.mozilla.org/en-US/firefox/addon/decentraleyes
 * https://addons.mozilla.org/en-US/firefox/addon/https-everywhere
@@ -25,6 +26,10 @@ firefox
 * https://addons.mozilla.org/en-US/firefox/addon/noscript
 * https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
 * https://addons.mozilla.org/en-US/firefox/addon/umatrix
+
+## Others
+* https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser
+
 
 # Cookie autodelete
 | Site | Keep cookie |

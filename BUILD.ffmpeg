@@ -6,6 +6,25 @@ filegroup(
 )
 
 configure_make(
+    name = "library",
+    lib_source = ":all",
+    configure_options = [
+        "--disable-static",
+        "--enable-shared",
+    ],
+    shared_libraries = [
+        "libavcodec.so",
+        "libavdevice.so",
+        "libavfilter.so",
+        "libavformat.so",
+        "libavutil.so",
+        "libswresample.so",
+        "libswscale.so",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+configure_make(
     name = "firefox_library",
     lib_source = ":all",
     configure_options = [

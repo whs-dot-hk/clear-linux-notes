@@ -75,6 +75,22 @@ http_file(
     downloaded_file_path = "waf",
 )
 
+http_archive(
+    name = "makemkv-oss",
+    build_file = "@//:BUILD.makemkv_oss",
+    strip_prefix = "makemkv-oss-1.15.4",
+    urls = ["https://www.makemkv.com/download/makemkv-oss-1.15.4.tar.gz"],
+    sha256 = "82d062d4844d17901293f65dce40e63ae1084fd81accd6913427eda9b2c43fe3",
+)
+
+http_archive(
+    name = "makemkv-bin",
+    build_file = "@//:BUILD.makemkv_bin",
+    strip_prefix = "makemkv-bin-1.15.4",
+    urls = ["https://www.makemkv.com/download/makemkv-bin-1.15.4.tar.gz"],
+    sha256 = "45eba7e61a7b467b1fe8de722fa890d556e19f3fc02a7b7f8d846ac8e2badb9a",
+)
+
 load("//:deps.bzl", "keepassxc_deps")
 
 keepassxc_deps()

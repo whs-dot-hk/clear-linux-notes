@@ -1,0 +1,19 @@
+load("@rules_foreign_cc//tools/build_defs:make.bzl", "make")
+
+filegroup(
+    name = "all",
+    srcs = glob(["**"]),
+)
+
+make(
+    name = "binary",
+    lib_source = ":all",
+    make_commands = [
+        "make PREFIX=$$INSTALLDIR$$",
+        "make install PREFIX=$$INSTALLDIR$$",
+    ],
+    binaries = [
+        "smplayer",
+    ],
+    visibility = ["//visibility:public"],
+)

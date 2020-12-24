@@ -91,6 +91,13 @@ http_archive(
     sha256 = "45eba7e61a7b467b1fe8de722fa890d556e19f3fc02a7b7f8d846ac8e2badb9a",
 )
 
+http_archive(
+    name = "smplayer",
+    build_file = "@//:BUILD.smplayer",
+    strip_prefix = "smplayer-20.4.2",
+    urls = ["https://downloads.sourceforge.net/smplayer/smplayer-20.4.2.tar.bz2"],
+)
+
 load("//:deps.bzl", "keepassxc_deps")
 
 keepassxc_deps()

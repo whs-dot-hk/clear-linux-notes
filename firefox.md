@@ -46,6 +46,11 @@ Settings > Enable support for firefox's container tabs
 youtube.com googlevideo.com xhr allow
 ```
 
+# Https everywhere
+```
+Encrypt all sites eligible is on
+```
+
 # Userscripts
 [Appendix A. Simple youtube like](#user-content-appendix-a-simple-youtube-like)
 

@@ -29,6 +29,7 @@ firefox
 
 ## Others
 * https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser
+* https://addons.mozilla.org/en-US/firefox/addon/tampermonkey
 
 # Cookie autodelete
 ```
@@ -44,8 +45,43 @@ Settings > Enable support for firefox's container tabs
 youtube.com googlevideo.com xhr allow
 ```
 
+# Userscripts
+[Appendix A. Simple youtube like](#user-content-appendix-a-simple-youtube-like)
+
 # User.js
 https://github.com/arkenfox/user.js
 
 # Tor
 https://www.torproject.org/download
+
+# Appendix A. Simple youtube like
+```js
+// ==UserScript==
+// @name     Simple youtube like
+// @match https://www.youtube.com/watch*
+// ==/UserScript==
+document
+  .querySelector("ytd-app")
+  .addEventListener("yt-page-data-updated", function () {
+    const likeButton = document.querySelector(
+      "ytd-toggle-button-renderer.style-scope:nth-child(1)"
+    );
+    const videoTitle = document.querySelector(
+      "yt-formatted-string.ytd-video-primary-info-renderer:nth-child(1)"
+    ).textContent;
+
+    (function liked() {
+      return (
+        likeButton.classList.contains("style-default-active") &&
+        (function log() {
+          console.log("Liked!");
+          return true;
+        })()
+      );
+    })() ||
+      (function like() {
+        likeButton.click();
+        console.log(`Liked! ${videoTitle}`);
+      })();
+  });
+```

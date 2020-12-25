@@ -30,8 +30,11 @@ firefox
 ## Others
 * https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser
 
-
 # Cookie autodelete
+```
+Settings > Enable support for firefox's container tabs
+```
+
 | Site | Keep cookie |
 | --- | --- |
 | Youtube | `__Secure-3PAPISID`, `__Secure-3PSID` and `__Secure-3PSIDCC` |

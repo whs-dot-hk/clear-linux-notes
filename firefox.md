@@ -50,6 +50,10 @@ youtube.com googlevideo.com xhr allow
 [Appendix A. Simple youtube like](#user-content-appendix-a-simple-youtube-like)
 
 # User.js
+```
+about:profiles > Open directory (root directory)
+```
+
 https://github.com/arkenfox/user.js
 
 # Tor

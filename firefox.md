@@ -26,6 +26,7 @@ firefox
 * https://addons.mozilla.org/en-US/firefox/addon/noscript
 * https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
 * https://addons.mozilla.org/en-US/firefox/addon/umatrix
+* https://addons.mozilla.org/en-US/firefox/addon/user-agent-string-switcher
 
 ## Others
 * https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser

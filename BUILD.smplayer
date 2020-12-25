@@ -8,10 +8,6 @@ filegroup(
 make(
     name = "binary",
     lib_source = ":all",
-    make_commands = [
-        "make PREFIX=$$INSTALLDIR$$",
-        "make install PREFIX=$$INSTALLDIR$$",
-    ],
     binaries = [
         "smplayer",
     ],

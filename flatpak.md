@@ -14,6 +14,9 @@ flatpak update
 flatpak install --or-update flathub com.valvesoftware.Steam
 ```
 
+## Civ6
+Works out of the box!
+
 # Filezilla
 ```sh
 flatpak install --or-update flathub org.filezillaproject.Filezilla

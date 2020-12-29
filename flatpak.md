@@ -15,9 +15,13 @@ flatpak install --or-update flathub com.valvesoftware.Steam
 ```
 
 ## Civ6
+https://www.protondb.com/app/289070
+
 Works out of the box!
 
 ## Gta5
+https://www.protondb.com/app/271590
+
 | Property | Value |
 | --- | --- |
 | Proton version | `5.0-10` |

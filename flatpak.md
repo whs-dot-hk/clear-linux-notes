@@ -17,6 +17,17 @@ flatpak install --or-update flathub com.valvesoftware.Steam
 ## Civ6
 Works out of the box!
 
+## Gta5
+| Property | Value |
+| --- | --- |
+| Proton version | `5.0-10` |
+| Launch options | `-fullscreen` |
+
+```sh
+# Remove settings.xml
+find $HOME/.var/app/com.valvesoftware.Steam -path **/My\ Documents/Rockstar\ Games/GTA\ V/settings.xml -exec rm {} \+
+```
+
 # Filezilla
 ```sh
 flatpak install --or-update flathub org.filezillaproject.Filezilla

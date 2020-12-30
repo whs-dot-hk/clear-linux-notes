@@ -29,8 +29,8 @@ firefox
 * https://addons.mozilla.org/en-US/firefox/addon/user-agent-string-switcher
 
 ## Others
+* https://addons.mozilla.org/en-US/firefox/addon/greasemonkey
 * https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser
-* https://addons.mozilla.org/en-US/firefox/addon/tampermonkey
 
 # Cookie autodelete
 ```

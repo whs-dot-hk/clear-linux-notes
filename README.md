@@ -3,7 +3,7 @@
 | --- | --- |
 | Firefox | `sh start_firefox.sh` |
 | Makemkv | `sh start_makemkv.sh` |
-| Smplayer/Mpv | `sh start_smplayer.sh` |
+| Smplayer/mpv | `sh start_smplayer.sh` |
 
 ## Weak password
 

@@ -77,23 +77,6 @@ reboot
 https://docs.01.org/clearlinux/latest/tutorials/nvidia.html
 
 ```sh
-# Copy the first cmd and enter the sudo password
-sudo tee /etc/systemd/system/fix-nvidia-libGL-trigger.service <<EOF > /dev/null
-[Unit]
-Description=Fixes libGL symlinks for the NVIDIA proprietary driver
-BindsTo=update-triggers.target
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/ln -sfv /opt/nvidia/lib/libGL.so.1 /usr/lib/libGL.so.1
-ExecStart=/usr/bin/ln -sfv /opt/nvidia/lib32/libGL.so.1 /usr/lib32/libGL.so.1
-EOF
-# End of first cmd, don't copy this line
-
-# Copy the remaining cmds
-sudo systemctl daemon-reload
-sudo systemctl add-wants update-triggers.target fix-nvidia-libGL-trigger.service
-
 # Disable nouveau
 sudo mkdir -p /etc/modprobe.d
 printf "blacklist nouveau \noptions nouveau modeset=0 \n" | sudo tee /etc/modprobe.d/disable-nouveau.conf
@@ -169,4 +152,9 @@ sudo sh cuda_11.2.0_460.27.04_linux.run \
 --no-man-page \
 --override \
 --silent
+```
+
+```sh
+sudo ln -sfv /opt/nvidia/lib/libEGL.so /usr/lib64/libEGL.so
+sudo ln -sfv /opt/nvidia/lib/libGL.so /usr/lib64/libGL.so
 ```

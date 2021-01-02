@@ -6,7 +6,6 @@ sh start_firefox.sh
 ## Privacy
 * https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete
 * https://addons.mozilla.org/en-US/firefox/addon/decentraleyes
-* https://addons.mozilla.org/en-US/firefox/addon/https-everywhere
 * https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers
 * https://addons.mozilla.org/en-US/firefox/addon/noscript
 * https://addons.mozilla.org/en-US/firefox/addon/ublock-origin

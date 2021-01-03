@@ -13,7 +13,7 @@ https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-conte
 # Link `libEGL` and `libGL`
 https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-link-libraries
 
-# Run modprobe script
+# Run `modprobe.sh`
 https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-modprobe-script
 
 Save the script as `modprobe.sh` and run it

@@ -79,10 +79,11 @@ sudo sh cuda_11.2.0_460.27.04_linux.run \
 --silent
 ```
 
+# Link libraries
 ```sh
 sudo ln -sfv /opt/nvidia/lib/libEGL.so /usr/lib64/libEGL.so
 sudo ln -sfv /opt/nvidia/lib/libGL.so /usr/lib64/libGL.so
 ```
 
-# Modprobe
+# Modprobe script
 https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#runfile-verifications

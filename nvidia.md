@@ -1,4 +1,4 @@
-## Nvidia
+# Nvidia
 https://docs.01.org/clearlinux/latest/tutorials/nvidia.html
 
 ```sh
@@ -56,7 +56,7 @@ reboot
 sh install_nvidia.sh
 ```
 
-## Cuda
+# Cuda
 https://docs.01.org/clearlinux/latest/tutorials/nvidia-cuda.html
 
 ```sh
@@ -83,3 +83,6 @@ sudo sh cuda_11.2.0_460.27.04_linux.run \
 sudo ln -sfv /opt/nvidia/lib/libEGL.so /usr/lib64/libEGL.so
 sudo ln -sfv /opt/nvidia/lib/libGL.so /usr/lib64/libGL.so
 ```
+
+# Modprobe
+https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#runfile-verifications

@@ -6,7 +6,14 @@ sudo swupd bundle-add devpkg-libass
 
 # Install nvidia and cuda
 https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-nvidia
+
 https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-cuda
+
+# Link libraries
+https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-link-libraries
+
+# Run modprobe script
+https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-modprobe-script
 
 # Config smplayer
 ```sh

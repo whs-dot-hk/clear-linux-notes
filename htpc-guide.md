@@ -4,9 +4,10 @@ sudo swupd bundle-add desktop-dev
 sudo swupd bundle-add devpkg-libass
 ```
 
-# Install nvidia and cuda
+# Install nvidia
 https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-nvidia
 
+# Install cuda
 https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-cuda
 
 # Link libraries

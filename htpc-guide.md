@@ -1,4 +1,4 @@
-# Install sdk
+# Install bundles
 ```sh
 sudo swupd bundle-add desktop-dev
 sudo swupd bundle-add devpkg-libass

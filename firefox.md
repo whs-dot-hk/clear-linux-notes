@@ -24,7 +24,9 @@ Settings > Enable support for firefox's container tabs
 | --- | --- |
 | Youtube | `__Secure-3PAPISID`, `__Secure-3PSID` and `__Secure-3PSIDCC` |
 
-# Ublock rules
+# Ublock origin rules
+https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode
+
 ```txt
 * * 1p-script block
 * * 3p block

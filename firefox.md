@@ -24,6 +24,15 @@ Settings > Enable support for firefox's container tabs
 | --- | --- |
 | Youtube | `__Secure-3PAPISID`, `__Secure-3PSID` and `__Secure-3PSIDCC` |
 
+# Ublock rules
+```txt
+* * 1p-script block
+* * 3p block
+* * 3p-frame block
+* * 3p-script block
+* * inline-script block
+```
+
 # Umatrix rules
 ```txt
 youtube.com googlevideo.com xhr allow

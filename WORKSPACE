@@ -70,25 +70,25 @@ new_git_repository(
 
 http_file(
     name = "waf",
-    urls = ["https://waf.io/waf-2.0.21"],
-    executable = True,
     downloaded_file_path = "waf",
+    executable = True,
+    urls = ["https://waf.io/waf-2.0.21"],
 )
 
 http_archive(
     name = "makemkv-oss",
     build_file = "@//:BUILD.makemkv_oss",
+    sha256 = "82d062d4844d17901293f65dce40e63ae1084fd81accd6913427eda9b2c43fe3",
     strip_prefix = "makemkv-oss-1.15.4",
     urls = ["https://www.makemkv.com/download/makemkv-oss-1.15.4.tar.gz"],
-    sha256 = "82d062d4844d17901293f65dce40e63ae1084fd81accd6913427eda9b2c43fe3",
 )
 
 http_archive(
     name = "makemkv-bin",
     build_file = "@//:BUILD.makemkv_bin",
+    sha256 = "45eba7e61a7b467b1fe8de722fa890d556e19f3fc02a7b7f8d846ac8e2badb9a",
     strip_prefix = "makemkv-bin-1.15.4",
     urls = ["https://www.makemkv.com/download/makemkv-bin-1.15.4.tar.gz"],
-    sha256 = "45eba7e61a7b467b1fe8de722fa890d556e19f3fc02a7b7f8d846ac8e2badb9a",
 )
 
 http_archive(
@@ -96,6 +96,19 @@ http_archive(
     build_file = "@//:BUILD.smplayer",
     strip_prefix = "smplayer-20.4.2",
     urls = ["https://downloads.sourceforge.net/smplayer/smplayer-20.4.2.tar.bz2"],
+)
+
+http_archive(
+    name = "lua52",
+    build_file = "@//:BUILD.lua52",
+    patch_args = [
+        "-p1",
+    ],
+    patches = [
+        "//:0001-Fedora-lua-patch.patch",
+    ],
+    strip_prefix = "lua-5.2.4",
+    urls = ["https://www.lua.org/ftp/lua-5.2.4.tar.gz"],
 )
 
 load("//:deps.bzl", "keepassxc_deps")

@@ -13,6 +13,7 @@ new_configure_make(
     ],
     deps = [
         "@ffmpeg//:mpv_library",
+        "@lua52//:library",
     ],
     configure_in_place = True,
     configure_command = "waf configure",

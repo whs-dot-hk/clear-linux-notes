@@ -17,4 +17,7 @@ configure_make(
         "liblua.a",
     ],
     visibility = ["//visibility:public"],
+    configure_options = [
+        "--disable-shared",
+    ],
 )

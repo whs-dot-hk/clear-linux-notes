@@ -101,16 +101,6 @@ or
 LD_LIBRARY_PATH=$HOME/my_keepassxc/usr/lib64 QT_DEBUG_PLUGINS=1 QT_PLUGIN_PATH=$HOME/my_keepassxc/usr/lib64/qt5/plugins bazel-bin/external/keepassxc/binary/bin/keepassxc
 ```
 
-## Minijail
-
-### Install libcap
-```sh
-# Debian
-sudo apt-get install -y libcap-dev
-# or clear linux
-sudo swupd bundle-add devpkg-libcap
-```
-
 ## Kpcli
 
 ### Install development packages

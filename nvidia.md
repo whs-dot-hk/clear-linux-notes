@@ -23,13 +23,13 @@ EOF
 ```
 
 ```sh
-curl -O https://download.nvidia.com/XFree86/Linux-x86_64/460.27.04/NVIDIA-Linux-x86_64-460.27.04.run
+curl -O https://download.nvidia.com/XFree86/Linux-x86_64/460.32.03/NVIDIA-Linux-x86_64-460.32.03.run
 ```
 
 ```sh
 # Save the install cmd before reboot
 tee ~/install_nvidia.sh <<EOF > /dev/null
-sudo sh NVIDIA-Linux-x86_64-460.27.04.run \
+sudo sh NVIDIA-Linux-x86_64-460.32.03.run \
 --utility-prefix=/opt/nvidia \
 --opengl-prefix=/opt/nvidia \
 --compat32-prefix=/opt/nvidia \
@@ -87,3 +87,17 @@ sudo ln -sfv /opt/nvidia/lib/libGL.so /usr/lib64/libGL.so
 
 # Modprobe script
 https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#runfile-verifications
+
+# Update
+```sh
+sudo systemctl set-default multi-user.target
+# Download nvidia driver
+reboot
+# Install nvidia driver
+sudo systemctl set-default graphical.target
+reboot
+```
+
+```sh
+flatpak update -y
+```

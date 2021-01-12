@@ -1,11 +1,11 @@
-load("@rules_foreign_cc//tools/build_defs:configure.bzl", "new_configure_make")
+load("@rules_foreign_cc//tools/build_defs:waf.bzl", "waf")
 
 filegroup(
     name = "all",
     srcs = glob(["**"]),
 )
 
-new_configure_make(
+waf(
     name = "binary",
     lib_source = ":all",
     binaries = [
@@ -15,14 +15,5 @@ new_configure_make(
         "@ffmpeg//:mpv_library",
         "@lua52//:library",
     ],
-    configure_in_place = True,
-    configure_command = "waf configure",
-    make_commands = [
-        "waf",
-        "waf install",
-    ],
     visibility = ["//visibility:public"],
-    tools_deps = [
-        "@waf//file",
-    ],
 )

@@ -64,7 +64,7 @@ new_git_repository(
 new_git_repository(
     name = "mpv",
     branch = "master",
-    build_file = "@//:BUILD.mpv",
+    build_file = "@//:BUILD.waf.mpv",
     remote = "https://github.com/mpv-player/mpv.git",
 )
 

@@ -53,11 +53,6 @@ github.com githubassets.com * noop
 youtube.com googlevideo.com xhr allow
 ```
 
-# Https everywhere
-```
-Encrypt all sites eligible is on
-```
-
 # User.js
 ```
 about:profiles > Open directory (root directory)

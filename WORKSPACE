@@ -77,7 +77,7 @@ http_file(
 
 http_archive(
     name = "makemkv-oss",
-    build_file = "@//:BUILD.configure_make.makemkv_oss",
+    build_file = "@//:BUILD.configure.makemkv_oss",
     sha256 = "82d062d4844d17901293f65dce40e63ae1084fd81accd6913427eda9b2c43fe3",
     strip_prefix = "makemkv-oss-1.15.4",
     urls = ["https://www.makemkv.com/download/makemkv-oss-1.15.4.tar.gz"],

@@ -43,6 +43,11 @@ www.youtube.com www.youtube.com * noop
 www.youtube.com ytimg.com * noop
 ```
 
+## Github
+```txt
+github.com githubassets.com * noop
+```
+
 # Umatrix rules
 ```txt
 youtube.com googlevideo.com xhr allow

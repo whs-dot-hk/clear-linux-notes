@@ -1,4 +1,4 @@
-- name: Install borg
+- name: Installer
   hosts: all
   tasks:
   - become: "yes"

@@ -1,4 +1,4 @@
-- name: install bazel
+- name: Installer
   hosts: all
   tasks:
   - become: "yes"
@@ -7,4 +7,4 @@
       mode: "0755"
       url: >-
         https://github.com/bazelbuild/bazel/releases/download/3.7.2/bazel-3.7.2-linux-x86_64
-    name: install bazel
+    name: Install bazel

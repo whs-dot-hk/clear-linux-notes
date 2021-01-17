@@ -111,6 +111,20 @@ http_archive(
     urls = ["https://www.lua.org/ftp/lua-5.2.4.tar.gz"],
 )
 
+new_git_repository(
+    name = "glslang",
+    branch = "master",
+    build_file = "@//:BUILD.cmake.glslang",
+    remote = "https://github.com/KhronosGroup/glslang.git",
+)
+
+new_git_repository(
+    name = "libplacebo",
+    branch = "master",
+    build_file = "@//:BUILD.ncm.libplacebo",
+    remote = "https://github.com/haasn/libplacebo.git",
+)
+
 load("//:deps.bzl", "keepassxc_deps")
 
 keepassxc_deps()

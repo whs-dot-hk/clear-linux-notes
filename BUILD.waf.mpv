@@ -14,6 +14,10 @@ waf(
     deps = [
         "@ffmpeg//:mpv_library",
         "@lua52//:library",
+        "@libplacebo//:library",
     ],
+    configure_env_vars = {
+        "LDFLAGS": "-lHLSL -lOSDependent -lGenericCodeGen -lMachineIndependent -lSPIRV -lglslang -lOGLCompiler -lSPVRemapper",
+    },
     visibility = ["//visibility:public"],
 )

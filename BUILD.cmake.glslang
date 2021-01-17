@@ -1,0 +1,16 @@
+load("@rules_foreign_cc//tools/build_defs:cmake.bzl", "cmake_external")
+
+filegroup(
+    name = "all",
+    srcs = glob(["**"]),
+)
+
+cmake_external(
+    name = "library",
+    lib_source = ":all",
+    static_libraries = [
+        "libglslang.a",
+    ],
+    out_lib_dir = "lib64",
+    visibility = ["//visibility:public"],
+)

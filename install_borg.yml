@@ -1,0 +1,9 @@
+- name: Install borg
+  hosts: all
+  tasks:
+  - become: "yes"
+    get_url:
+      dest: /usr/local/bin/borg
+      mode: "0755"
+      url: "https://github.com/borgbackup/borg/releases/download/1.1.15/borg-linux64"
+    name: Install borg

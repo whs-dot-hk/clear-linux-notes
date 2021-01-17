@@ -17,19 +17,6 @@ sudo mkdir -p /usr/local/bin
 sh install_bazel.sh
 ```
 
-## Install borgbackup
-```sh
-cat - <(curl -sS https://raw.githubusercontent.com/whs-dot-hk/ansible-fedora-32/master/roles/borgbackup/tasks/main.yml | sed 's|^|  |') <<EOF > install_borgbackup.yml
-- name: Install borgbackup
-  hosts: all
-  tasks:
-EOF
-```
-
-```sh
-ansible-playbook -i localhost, -c local install_borgbackup.yml -K
-```
-
 ## Install golang
 ```sh
 cat - <(curl -sS https://raw.githubusercontent.com/whs-dot-hk/ansible-fedora-32/master/roles/golang/tasks/main.yml | sed 's|^|  |') <<EOF > install_golang.yml

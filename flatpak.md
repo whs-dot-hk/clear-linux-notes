@@ -31,8 +31,3 @@ https://www.protondb.com/app/271590
 # Remove settings.xml
 find $HOME/.var/app/com.valvesoftware.Steam -path **/My\ Documents/Rockstar\ Games/GTA\ V/settings.xml -exec rm {} \+
 ```
-
-# Filezilla
-```sh
-flatpak install --or-update flathub org.filezillaproject.Filezilla
-```

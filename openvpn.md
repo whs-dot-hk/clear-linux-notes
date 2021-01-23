@@ -8,3 +8,7 @@ chmod a+x update-resolv-conf
 sudo mkdir /etc/openvpn
 sudo cp update-resolv-conf /etc/openvpn
 ```
+
+# Dns leak
+* https://ipleak.net
+* https://www.dnsleaktest.com

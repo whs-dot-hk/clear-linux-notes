@@ -4,9 +4,9 @@ sudo apt-get install -y openjdk-8-jre
 
 ```sh
 # https://www.jenkins.io/download
-curl -OL https://get.jenkins.io/war-stable/2.263.1/jenkins.war
+curl -OL https://get.jenkins.io/war-stable/2.263.2/jenkins.war
 # https://github.com/jenkinsci/plugin-installation-manager-tool
-curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.4.0/jenkins-plugin-manager-2.4.0.jar
+curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.5.0/jenkins-plugin-manager-2.5.0.jar
 ```
 
 # Plugins
@@ -23,6 +23,9 @@ curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/
 
 ```sh
 mkdir -p .jenkins/plugins
+```
+
+```sh
 tee plugins.txt > /dev/null <<EOF
 configuration-as-code
 credentials-binding
@@ -38,7 +41,7 @@ sed -i '2,$ s/^/#/' plugins.txt
 plugins=$(wc -l < plugins.txt)
 for i in $(seq 1 $plugins)
 do
-java -jar jenkins-plugin-manager-2.4.0.jar --war ./jenkins.war --plugin-file plugins.txt -d .jenkins/plugins # install plugins
+java -jar jenkins-plugin-manager-2.5.0.jar --war ./jenkins.war --plugin-file plugins.txt -d .jenkins/plugins # install plugins
 sed -i '0,/^#/ s/^#//' plugins.txt
 done
 )
@@ -49,6 +52,9 @@ https://github.com/jenkinsci/configuration-as-code-plugin
 
 ```sh
 mkdir -p .jenkins/casc_configs
+```
+
+```sh
 tee .jenkins/casc_configs/jcasc.yaml > /dev/null <<EOF
 jenkins:
   systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code plugin\n\n"
@@ -56,5 +62,5 @@ EOF
 ```
 
 ```sh
-java -Djenkins.install.runSetupWizard=false -Dcasc.jenkins.config=.jenkins/casc_configs/jcasc.yaml -jar jenkins.war # run jenkins
+java -Djenkins.install.runSetupWizard=false -Dcasc.jenkins.config=.jenkins/casc_configs/jcasc.yaml -jar jenkins.war # start jenkins, port 8080
 ```

@@ -26,16 +26,17 @@ document
     (function subscribed() {
       return subscribeButton.hasAttribute("subscribed") && log("Subscribed!");
     })() ||
+      (function cancelled() {
+        return cancel[subscriptionText] && log("Cancelled!");
+      })() ||
       (function debounce() {
         views[subscriptionText] |= 0;
         return (views[subscriptionText] += 1) % 2 !== 0 && log("Debounced!");
       })() ||
-      (function cancelled() {
-        return cancel[subscriptionText] && log("Cancelled!");
-      })() ||
       (function subscribe() {
         if (confirm(subscriptionText)) {
           subscribeButton.click();
+          console.log(subscriptionText.replace(/subscribe/i, "Subscribed"));
         } else {
           cancel[subscriptionText] = true;
         }

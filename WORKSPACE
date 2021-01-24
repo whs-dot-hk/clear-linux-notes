@@ -68,13 +68,6 @@ new_git_repository(
     remote = "https://github.com/mpv-player/mpv.git",
 )
 
-http_file(
-    name = "waf",
-    downloaded_file_path = "waf",
-    executable = True,
-    urls = ["https://waf.io/waf-2.0.21"],
-)
-
 http_archive(
     name = "makemkv-oss",
     build_file = "@//:BUILD.configure.makemkv_oss",

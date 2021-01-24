@@ -15,7 +15,7 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "new_git_repository")
 new_git_repository(
     name = "x264",
     branch = "master",
-    build_file = "@//:BUILD.x264",
+    build_file = "@//:BUILD.ncm.x264",
     remote = "https://code.videolan.org/videolan/x264.git",
 )
 

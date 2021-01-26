@@ -12,6 +12,7 @@ https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode
 ```txt
 www.youtube.com google.com * noop
 www.youtube.com googlevideo.com * noop
+www.youtube.com gstatic.com * noop
 www.youtube.com youtube.com * noop
 www.youtube.com www.youtube.com * noop
 www.youtube.com ytimg.com * noop

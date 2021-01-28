@@ -23,13 +23,13 @@ EOF
 ```
 
 ```sh
-curl -O https://download.nvidia.com/XFree86/Linux-x86_64/460.32.03/NVIDIA-Linux-x86_64-460.32.03.run
+curl -O https://download.nvidia.com/XFree86/Linux-x86_64/460.39/NVIDIA-Linux-x86_64-460.39.run
 ```
 
 ```sh
 # Save the install cmd before reboot
 tee ~/install_nvidia.sh <<EOF > /dev/null
-sudo sh NVIDIA-Linux-x86_64-460.32.03.run \
+sudo sh NVIDIA-Linux-x86_64-460.39.run \
 --utility-prefix=/opt/nvidia \
 --opengl-prefix=/opt/nvidia \
 --compat32-prefix=/opt/nvidia \
@@ -49,6 +49,9 @@ sudo sh NVIDIA-Linux-x86_64-460.32.03.run \
 --dkms \
 --silent
 EOF
+```
+
+```sh
 reboot
 ```
 
@@ -100,4 +103,8 @@ reboot
 
 ```sh
 flatpak update -y
+```
+
+```sh
+modinfo nvidia | grep ^version
 ```

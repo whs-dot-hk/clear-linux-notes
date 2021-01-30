@@ -22,7 +22,7 @@ new_git_repository(
 new_git_repository(
     name = "ffmpeg",
     branch = "master",
-    build_file = "@//:BUILD.ffmpeg",
+    build_file = "@//:BUILD.cm.ffmpeg",
     remote = "https://git.ffmpeg.org/ffmpeg.git",
 )
 
@@ -57,7 +57,7 @@ http_archive(
 new_git_repository(
     name = "nv_codec_headers",
     branch = "master",
-    build_file = "@//:BUILD.nv_codec_headers",
+    build_file = "@//:BUILD.make.nv_codec_headers",
     remote = "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
 )
 
@@ -70,7 +70,7 @@ new_git_repository(
 
 http_archive(
     name = "makemkv-oss",
-    build_file = "@//:BUILD.configure.makemkv_oss",
+    build_file = "@//:BUILD.cm.makemkv_oss",
     sha256 = "82d062d4844d17901293f65dce40e63ae1084fd81accd6913427eda9b2c43fe3",
     strip_prefix = "makemkv-oss-1.15.4",
     urls = ["https://www.makemkv.com/download/makemkv-oss-1.15.4.tar.gz"],
@@ -86,7 +86,7 @@ http_archive(
 
 http_archive(
     name = "smplayer",
-    build_file = "@//:BUILD.smplayer",
+    build_file = "@//:BUILD.make.smplayer",
     strip_prefix = "smplayer-20.4.2",
     urls = ["https://downloads.sourceforge.net/smplayer/smplayer-20.4.2.tar.bz2"],
 )

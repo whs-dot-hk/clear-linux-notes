@@ -93,13 +93,7 @@ http_archive(
 
 http_archive(
     name = "lua52",
-    build_file = "@//:BUILD.lua52",
-    patch_args = [
-        "-p1",
-    ],
-    patches = [
-        "//:0001-Fedora-lua-patch.patch",
-    ],
+    build_file = "@//:BUILD.make.lua52",
     strip_prefix = "lua-5.2.4",
     urls = ["https://www.lua.org/ftp/lua-5.2.4.tar.gz"],
 )

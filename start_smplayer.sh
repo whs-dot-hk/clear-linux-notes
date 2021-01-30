@@ -1,4 +1,4 @@
-bazel build @mpv//:binary
+. ./build_mpv.sh
 
 bazel build @smplayer//:binary
 

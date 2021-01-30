@@ -1,5 +1,3 @@
-export PATH=$PATH:$HOME/.local/bin
-
-bazel build @mpv//:binary
+. ./build_mpv.sh
 
 bazel-bin/external/mpv/binary/bin/mpv $@

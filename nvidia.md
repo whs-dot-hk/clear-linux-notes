@@ -99,6 +99,7 @@ reboot
 # Install nvidia driver
 sudo systemctl set-default graphical.target
 reboot
+# Link libraries
 ```
 
 ```sh

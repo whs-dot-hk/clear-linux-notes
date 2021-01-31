@@ -13,11 +13,13 @@ export PATH=$PATH:$HOME/.local/bin
 | Name | Command |
 | --- | --- |
 | Ansible | `pip install --user --upgrade ansible` |
+| Borgmatic | `pip install --user --upgrade borgmatic` |
 
 # Ansible
 | Name | Command |
 | --- | --- |
 | Bazel | `sh install_bazel.sh` |
+| Borg | `sh install_borg.sh` |
 
 ## Weak password
 

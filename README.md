@@ -6,6 +6,19 @@
 | Mpv | `sh start_mpv.sh` |
 | Smplayer | `sh start_smplayer.sh` |
 
+# Pip
+```sh
+export PATH=$PATH:$HOME/.local/bin
+```
+| Name | Command |
+| --- | --- |
+| Ansible | `pip install --user --upgrade ansible` |
+
+# Ansible
+| Name | Command |
+| --- | --- |
+| Bazel | `sh install_bazel.sh` |
+
 ## Weak password
 
 ```sh

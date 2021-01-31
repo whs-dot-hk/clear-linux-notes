@@ -11,9 +11,5 @@ make(
     static_libraries = [
         "liblua.a",
     ],
-    make_commands = [
-        "make -j`nproc` PLAT=linux",
-        "make install INSTALL_TOP=$$INSTALLDIR$$",
-    ],
     visibility = ["//visibility:public"],
 )

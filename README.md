@@ -3,7 +3,7 @@
 | --- | --- |
 | Firefox | `sh start_firefox.sh` |
 | Makemkv | `sh start_makemkv.sh` |
-| Mpv | `sh start_mpv.sh` |
+| Mpv | `sh start_mpv.sh [youtube url]` |
 | Smplayer | `sh start_smplayer.sh` |
 
 # Pip

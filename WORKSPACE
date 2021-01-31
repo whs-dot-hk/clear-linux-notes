@@ -96,6 +96,12 @@ http_archive(
     build_file = "@//:BUILD.make.lua52",
     strip_prefix = "lua-5.2.4",
     urls = ["https://www.lua.org/ftp/lua-5.2.4.tar.gz"],
+    patch_args = [
+        "-p1",
+    ],
+    patches = [
+        "//:0001-Lua-patch.patch",
+    ],
 )
 
 new_git_repository(

@@ -13,7 +13,7 @@ export PATH=$PATH:$HOME/.local/bin
 | Name | Command | Remarks |
 | --- | --- | --- |
 | Ansible | `pip install --user --upgrade ansible` | |
-| Borgmatic | `pip install --user --upgrade borgmatic` | [Install borg](#install-borg) |
+| Borgmatic | `pip install --user --upgrade borgmatic` | [Install borg](#user-content-install-borg) |
 
 # Ansible
 | Name | Command |

@@ -10,16 +10,16 @@
 ```sh
 export PATH=$PATH:$HOME/.local/bin
 ```
-| Name | Command |
-| --- | --- |
-| Ansible | `pip install --user --upgrade ansible` |
-| Borgmatic | `pip install --user --upgrade borgmatic` |
+| Name | Command | Remarks |
+| --- | --- | --- |
+| Ansible | `pip install --user --upgrade ansible` | |
+| Borgmatic | `pip install --user --upgrade borgmatic` | [Install borg](#install-borg) |
 
 # Ansible
 | Name | Command |
 | --- | --- |
 | Bazel | `sh install_bazel.sh` |
-| Borg | `sh install_borg.sh` |
+| Borg <div id="install-borg" /> | `sh install_borg.sh` |
 
 ## Weak password
 

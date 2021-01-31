@@ -19,7 +19,7 @@ export PATH=$PATH:$HOME/.local/bin
 | Name | Command |
 | --- | --- |
 | Bazel | `sh install_bazel.sh` |
-| Borg <div id="install-borg" /> | `sh install_borg.sh` |
+| Borg | <div id="install-borg">`sh install_borg.sh`</div> |
 
 ## Weak password
 

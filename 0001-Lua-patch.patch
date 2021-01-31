@@ -1,6 +1,6 @@
-From d53065fdcc26139596c88e5a1349e1067262df5f Mon Sep 17 00:00:00 2001
+From 63237b109288fdd4c0066abdd2644609340c4f7b Mon Sep 17 00:00:00 2001
 From: whs <hswongac@gmail.com>
-Date: Sun, 31 Jan 2021 13:38:18 +0800
+Date: Sun, 31 Jan 2021 14:51:25 +0800
 Subject: [PATCH] Lua patch
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH] Lua patch
  1 file changed, 12 insertions(+), 4 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index b2a62cf..72e6b3e 100644
+index b2a62cf..4778959 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -4,13 +4,14 @@
@@ -32,7 +32,7 @@ index b2a62cf..72e6b3e 100644
  V= 5.2
  R= $V.4
  
-+LUAPC= prefix=\$${EXT_BUILD_DEPS}/library \nexec_prefix=\$${prefix} \nlibdir=\$${prefix}/lib \nincludedir=\$${prefix}/include \n\nName: Lua \nDescription: An Extensible Extension Language \nVersion: ${R} \nRequires: \nLibs: -llua -lm -ldl \nCflags: -I\$${includedir}
++LUAPC= prefix=$(PREFIX) \nexec_prefix=\$${prefix} \nlibdir=\$${prefix}/lib \nincludedir=\$${prefix}/include \n\nName: Lua \nDescription: An Extensible Extension Language \nVersion: ${R} \nRequires: \nLibs: -llua -lm -ldl \nCflags: -I\$${includedir}
 +
  # Targets start here.
 -all:	$(PLAT)

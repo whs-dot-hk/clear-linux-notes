@@ -1,10 +1,8 @@
-load("@rules_foreign_cc//tools/build_defs:configure.bzl", "new_configure_make")
+load("@//:copy.bzl", "copy")
 
 filegroup(
     name = "all",
-    srcs = glob(["**"], exclude = ["configure"]) + [
-        "//:configure.modified",
-    ],
+    srcs = glob(["**"]),
 )
 
 genrule(
@@ -19,20 +17,21 @@ genrule(
     ]),
 )
 
-x264_prefix_script = """
-find -L $$EXT_BUILD_ROOT$$ -type f -name "*.modified" -exec sh -c "cp {} $$EXT_BUILD_ROOT$$/external/x264/\$(basename {} .modified)" \;
-"""
-
-new_configure_make(
+copy(
     name = "firefox_library",
     lib_source = ":all",
     configure_options = [
         "--enable-shared",
         "--extra-cflags='-Dredacted=\"\\\"redacted\\\"\"'",
     ],
-    prefix_script = x264_prefix_script,
     shared_libraries = [
         "libx264.so",
     ],
     visibility = ["//visibility:public"],
+    additional_inputs = [
+        "//:configure.modified",
+    ],
+    copy_files = {
+        "configure.modified": "configure",
+    },
 )

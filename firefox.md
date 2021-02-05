@@ -3,6 +3,9 @@ sh start_firefox.sh
 ```
 
 # Plugins
+```
+about:debugging#/runtime/this-firefox
+```
 ## Privacy
 * https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete
 * https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers
@@ -29,11 +32,10 @@ youtube.com googlevideo.com xhr allow
 ```
 
 # User.js
+https://github.com/arkenfox/user.js
 ```
 about:profiles > Open directory (root directory)
 ```
-
-https://github.com/arkenfox/user.js
 
 # Tor
 https://www.torproject.org/download

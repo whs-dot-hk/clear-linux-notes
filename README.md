@@ -22,6 +22,16 @@ export PATH=$PATH:$HOME/.local/bin
 | Bazel | `sh install_bazel.sh` |
 | Borg | <div id="install-borg">`sh install_borg.sh`</div> |
 
+# Flatpak
+```sh
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+
+| Name | Command |
+| --- | --- |
+| LibreOffice | `flatpak install --or-update flathub org.libreoffice.LibreOffice` |
+| Steam | `flatpak install --or-update flathub com.valvesoftware.Steam` |
+
 ## Weak password
 
 ```sh

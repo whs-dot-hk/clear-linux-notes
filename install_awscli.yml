@@ -1,0 +1,40 @@
+- name: Installer
+  hosts: all
+  tasks:
+  - name: Get awscli stat
+    register: s
+    stat:
+      path: /usr/local/bin/aws
+  - block:
+      - name: Create awscli tmpdir
+        register: f
+        tempfile:
+          state: directory
+          suffix: awscli
+      - name: Download awscli
+        unarchive:
+          dest: "{{ f.path }}"
+          remote_src: "yes"
+          src: "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"
+      - become: "yes"
+        name: Install awscli
+        shell: "{{ f.path }}/aws/install"
+      - file:
+          path: "{{ f.path }}"
+          state: absent
+        name: Remove awscli tmpdir
+    name: Download and install awscli
+    when: not s.stat.exists
+  - block:
+      - ignore_errors: "yes"
+        name: Query ssm
+        register: r
+        shell: dpkg-query -l session-manager-plugin | grep ^ii
+      - apt:
+          deb: >-
+            https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb
+        become: "yes"
+        name: Install ssm
+        when: r.rc != 0
+    name: Install ssm
+    when: 'ansible_facts[''os_family''] == "Debian"'

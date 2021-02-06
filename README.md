@@ -18,6 +18,7 @@ export PATH=$PATH:$HOME/.local/bin
 # Ansible
 | Name | Command |
 | --- | --- |
+| Awscli | `sh install_awscli.sh [ext]` |
 | Bazel | `sh install_bazel.sh` |
 | Borg | <div id="install-borg">`sh install_borg.sh`</div> |
 

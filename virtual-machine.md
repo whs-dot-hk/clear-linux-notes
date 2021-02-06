@@ -1,4 +1,3 @@
-# Virtual machine
 https://docs.01.org/clearlinux/latest/get-started/virtual-machine-install/virt-manager.html
 
 ```sh
@@ -12,7 +11,7 @@ sudo systemctl enable libvirtd
 reboot
 ```
 
-## Default network
+# Default network
 https://wiki.libvirt.org/page/Networking
 
 ```sh
@@ -26,13 +25,13 @@ sudo virsh net-start default
 sudo brctl show
 ```
 
-## Allow virbr0
+# Allow virbr0
 ```sh
 sudo mkdir -p /etc/qemu
 echo "allow virbr0" | sudo tee /etc/qemu/bridge.conf
 ```
 
-## List resources
+# List resources
 ```sh
 # List domains
 virsh list --all
@@ -40,8 +39,13 @@ virsh list --all
 sudo virsh net-dhcp-leases default
 ```
 
-## Debian 9
-### Preseed
+# Copy ssh key
+```sh
+ssh-copy-id whs@192.168.122.$ext
+```
+
+# Debian 9
+## Preseed
 https://wiki.debian.org/DebianInstaller/Preseed
 
 ```sh
@@ -73,8 +77,8 @@ virsh start debian9
 virt-viewer debian9
 ```
 
-## Fedora 33
-### Pykickstart
+# Fedora 33
+## Pykickstart
 https://pykickstart.readthedocs.io/en/latest/kickstart-docs.html
 
 ```txt

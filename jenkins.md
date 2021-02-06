@@ -4,7 +4,7 @@ sudo apt-get install -y openjdk-8-jre
 
 ```sh
 # https://www.jenkins.io/download
-curl -OL https://get.jenkins.io/war-stable/2.263.2/jenkins.war
+curl -OL https://get.jenkins.io/war-stable/2.263.3/jenkins.war
 # https://github.com/jenkinsci/plugin-installation-manager-tool
 curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.5.0/jenkins-plugin-manager-2.5.0.jar
 ```
@@ -62,5 +62,5 @@ EOF
 ```
 
 ```sh
-java -Djenkins.install.runSetupWizard=false -Dcasc.jenkins.config=.jenkins/casc_configs/jcasc.yaml -jar jenkins.war # start jenkins, port 8080
+java -Djenkins.install.runSetupWizard=false -Dcasc.jenkins.config=.jenkins/casc_configs/jcasc.yaml -jar jenkins.war --httpPort=8080 # start jenkins
 ```

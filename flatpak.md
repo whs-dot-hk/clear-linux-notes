@@ -6,11 +6,6 @@ https://docs.flatpak.org/en/latest/using-flatpak.html
 ps aux | grep steam | grep -v grep | awk '{print "kill " $2}' | sh
 ```
 
-## Civ6
-https://www.protondb.com/app/289070
-
-Works out of the box!
-
 ## Gta5
 https://www.protondb.com/app/271590
 

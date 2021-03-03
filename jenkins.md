@@ -4,9 +4,9 @@ sudo apt-get install -y openjdk-8-jre
 
 ```sh
 # https://www.jenkins.io/download
-curl -OL https://get.jenkins.io/war-stable/2.263.3/jenkins.war
+curl -OL https://get.jenkins.io/war-stable/2.263.4/jenkins.war
 # https://github.com/jenkinsci/plugin-installation-manager-tool
-curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.5.0/jenkins-plugin-manager-2.5.0.jar
+curl -OL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.7.2/jenkins-plugin-manager-2.7.2.jar
 ```
 
 # Plugins
@@ -41,7 +41,7 @@ sed -i '2,$ s/^/#/' plugins.txt
 plugins=$(wc -l < plugins.txt)
 for i in $(seq 1 $plugins)
 do
-java -jar jenkins-plugin-manager-2.5.0.jar --war ./jenkins.war --plugin-file plugins.txt -d .jenkins/plugins # install plugins
+java -jar jenkins-plugin-manager-2.7.2.jar --war ./jenkins.war --plugin-file plugins.txt -d .jenkins/plugins # install plugins
 sed -i '0,/^#/ s/^#//' plugins.txt
 done
 )

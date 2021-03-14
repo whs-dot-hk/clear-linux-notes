@@ -34,6 +34,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 # Swupd
 | Name | Command |
+| --- | --- |
 | Chess | `sudo swupd bundle-add gnome-chess` |
 
 ## Weak password

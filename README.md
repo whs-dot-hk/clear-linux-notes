@@ -32,6 +32,10 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 | LibreOffice | `flatpak install --or-update flathub org.libreoffice.LibreOffice` |
 | Steam | `flatpak install --or-update flathub com.valvesoftware.Steam` |
 
+# Swupd
+| Name | Command |
+| Chess | `sudo swupd bundle-add gnome-chess` |
+
 ## Weak password
 
 ```sh

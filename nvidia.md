@@ -70,11 +70,11 @@ sudo ln -s /usr/bin/g++-8 /usr/local/cuda/bin/g++
 ```
 
 ```sh
-curl -O https://developer.download.nvidia.com/compute/cuda/11.2.0/local_installers/cuda_11.2.0_460.27.04_linux.run
+curl -O https://developer.download.nvidia.com/compute/cuda/11.3.0/local_installers/cuda_11.3.0_465.19.01_linux.run
 ```
 
 ```sh
-sudo sh cuda_11.2.0_460.27.04_linux.run \
+sudo sh cuda_11.3.0_465.19.01_linux.run \
 --toolkit \
 --installpath=/opt/cuda \
 --no-man-page \

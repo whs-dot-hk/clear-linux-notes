@@ -25,6 +25,11 @@ Settings > Enable support for firefox's container tabs
 | --- | --- |
 | Youtube | `__Secure-3PAPISID`, `__Secure-3PSID` and `__Secure-3PSIDCC` |
 
+# Keepassxc browser
+```
+Tools > Settings > Browser integration > Enable browser integration > Firefox
+```
+
 # User.js
 https://github.com/arkenfox/user.js
 ```

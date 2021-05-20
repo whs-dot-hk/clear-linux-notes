@@ -16,6 +16,10 @@ export PATH=$PATH:$HOME/.local/bin
 | Borgmatic | `pip install --user --upgrade borgmatic` | [Install borg](#user-content-install-borg) |
 
 # Ansible
+```sh
+sudo mkdir -p /usr/local/bin
+```
+
 | Name | Command |
 | --- | --- |
 | Awscli | `sh install_awscli.sh [ext]` |

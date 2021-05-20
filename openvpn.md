@@ -1,3 +1,7 @@
+```sh
+sudo swupd bundle-add network-basic
+```
+
 # Protonvpn
 https://protonvpn.com/support/linux-vpn-setup
 

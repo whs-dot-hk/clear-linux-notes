@@ -1,0 +1,13 @@
+- name: Installer
+  hosts: all
+  tasks:
+  - become: "yes"
+    name: Install hugo
+    unarchive:
+      creates: /usr/local/bin/hugo
+      dest: /usr/local/bin
+      extra_opts:
+        - hugo
+      remote_src: "yes"
+      src: >-
+        https://github.com/gohugoio/hugo/releases/download/v0.83.1/hugo_0.83.1_Linux-64bit.tar.gz

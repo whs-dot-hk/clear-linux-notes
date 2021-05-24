@@ -15,9 +15,10 @@ reboot
 https://wiki.libvirt.org/page/Networking
 
 ```sh
+cd ~/Downloads
 # http://mirrors.fedoraproject.org
-curl -O https://nrt.edge.kernel.org/fedora-buffet/fedora/linux/releases/33/Everything/x86_64/os/Packages/l/libvirt-daemon-config-network-6.6.0-2.fc33.x86_64.rpm
-rpm2cpio libvirt-daemon-config-network-6.6.0-2.fc33.x86_64.rpm | cpio -iduv ./usr/share/libvirt/networks/default.xml
+curl -O https://nrt.edge.kernel.org/fedora-buffet/fedora/linux/releases/34/Everything/x86_64/os/Packages/l/libvirt-daemon-config-network-7.0.0-4.fc34.x86_64.rpm
+rpm2cpio libvirt-daemon-config-network-7.0.0-4.fc34.x86_64.rpm | cpio -iduv ./usr/share/libvirt/networks/default.xml
 sudo virsh net-define usr/share/libvirt/networks/default.xml
 sudo virsh net-autostart default
 sudo virsh net-start default

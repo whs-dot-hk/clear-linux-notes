@@ -6,5 +6,5 @@
       dest: /usr/local/bin/bazel
       mode: "0755"
       url: >-
-        https://github.com/bazelbuild/bazel/releases/download/3.7.2/bazel-3.7.2-linux-x86_64
+        https://github.com/bazelbuild/bazel/releases/download/4.0.0/bazel-4.0.0-linux-x86_64
     name: Install bazel

@@ -10,7 +10,7 @@ https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-conte
 # Install CUDA
 https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-cuda
 
-# Link `libEGL` and `libGL`
+# Link `libEGL`, `libGL` and `libGLESv2`
 https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-link-libraries
 
 # Run `modprobe.sh`

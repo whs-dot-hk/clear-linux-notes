@@ -9,6 +9,10 @@ document
       "ytd-menu-renderer.ytd-video-primary-info-renderer > div:nth-child(2) > ytd-toggle-button-renderer:nth-child(1) > a:nth-child(1)"
     );
 
+    const likeButtonIcon = document.querySelector(
+      "ytd-menu-renderer.ytd-video-primary-info-renderer > div:nth-child(2) > ytd-toggle-button-renderer:nth-child(1) > a:nth-child(1) > yt-icon-button:nth-child(1)"
+    );
+
     const videoTitle = document.querySelector(
       "yt-formatted-string.ytd-video-primary-info-renderer:nth-child(1)"
     ).textContent;
@@ -19,7 +23,7 @@ document
 
     (function liked() {
       return (
-        likeButton.classList.contains("style-default-active") &&
+        likeButtonIcon.classList.contains("style-default-active") &&
         (function log() {
           console.log("Liked!");
           return true;

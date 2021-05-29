@@ -89,6 +89,7 @@ sudo sh cuda_11.3.1_465.19.01_linux.run \
 ```sh
 sudo ln -sfv /opt/nvidia/lib/libEGL.so /usr/lib64/libEGL.so
 sudo ln -sfv /opt/nvidia/lib/libGL.so /usr/lib64/libGL.so
+sudo ln -sfv /opt/nvidia/lib/libGLESv2.so /usr/lib64/libGLESv2.so
 ```
 
 # Modprobe script

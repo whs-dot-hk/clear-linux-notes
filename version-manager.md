@@ -3,9 +3,6 @@
 ## Rvm
 https://rvm.io
 
-## Nvm
-https://github.com/nvm-sh/nvm
-
 ## Sdkman
 https://sdkman.io
 

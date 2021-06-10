@@ -30,11 +30,5 @@ Settings > Enable support for firefox's container tabs
 Tools > Settings > Browser integration > Enable browser integration > Firefox
 ```
 
-# User.js
-https://github.com/arkenfox/user.js
-```
-about:profiles > Open directory (root directory)
-```
-
 # Tor
 https://www.torproject.org/download

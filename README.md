@@ -26,6 +26,7 @@ sudo mkdir -p /usr/local/bin
 | Awscli | `sh install_awscli.sh [ext]` |
 | Bazel | `sh install_bazel.sh` |
 | Borg | <div id="install-borg">`sh install_borg.sh`</div> |
+| Hugo | `sh install_hugo.sh` |
 
 # Flatpak
 ```sh

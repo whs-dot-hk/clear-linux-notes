@@ -1,7 +1,6 @@
 # Install `desktop-dev` and `devpkg-libass`
 ```sh
 sudo swupd bundle-add desktop-dev
-sudo swupd bundle-add devpkg-libass
 ```
 
 # Install Nvidia
@@ -9,6 +8,9 @@ https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-conte
 
 # Install CUDA
 https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-cuda
+
+# Install GCC 8
+https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-install-gcc-8
 
 # Link `libEGL`, `libGL` and `libGLESv2`
 https://github.com/whs-dot-hk/clear-linux-notes/blob/master/nvidia.md#user-content-link-libraries

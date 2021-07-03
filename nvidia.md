@@ -69,25 +69,28 @@ sh install_nvidia.sh
 https://docs.01.org/clearlinux/latest/tutorials/nvidia-cuda.html
 
 ```sh
-sudo swupd bundle-add c-extras-gcc8
-sudo mkdir -p /usr/local/cuda/bin
-sudo ln -s /usr/bin/gcc-8 /usr/local/cuda/bin/gcc
-sudo ln -s /usr/bin/g++-8 /usr/local/cuda/bin/g++
-```
-
-```sh
+# https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=runfile_local
 cd ~/Downloads
-curl -O https://developer.download.nvidia.com/compute/cuda/11.3.1/local_installers/cuda_11.3.1_465.19.01_linux.run
+curl -O https://developer.download.nvidia.com/compute/cuda/11.4.0/local_installers/cuda_11.4.0_470.42.01_linux.run
 ```
 
 ```sh
-sudo sh cuda_11.3.1_465.19.01_linux.run \
+sudo sh cuda_11.4.0_470.42.01_linux.run \
 --toolkit \
 --installpath=/opt/cuda \
 --no-man-page \
 --override \
 --silent
 ```
+
+# Install GCC 8
+```sh
+sudo swupd bundle-add c-extras-gcc8
+sudo mkdir -p /usr/local/cuda/bin
+sudo ln -s /usr/bin/gcc-8 /usr/local/cuda/bin/gcc
+sudo ln -s /usr/bin/g++-8 /usr/local/cuda/bin/g++
+```
+
 
 # Link libraries
 ```sh

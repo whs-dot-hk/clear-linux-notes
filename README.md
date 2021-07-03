@@ -8,7 +8,8 @@
 
 # Pip
 ```sh
-export PATH=$PATH:$HOME/.local/bin
+echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
+source ~/.bashrc
 ```
 | Name | Command | Remarks |
 | --- | --- | --- |

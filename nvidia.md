@@ -1,3 +1,7 @@
+```sh
+sudo swupd bundle-add kernel-native-dkms
+```
+
 # Nvidia
 https://docs.01.org/clearlinux/latest/tutorials/nvidia.html
 
@@ -25,13 +29,13 @@ EOF
 ```sh
 # https://download.nvidia.com/XFree86/Linux-x86_64
 cd ~/Downloads
-curl -O https://download.nvidia.com/XFree86/Linux-x86_64/465.31/NVIDIA-Linux-x86_64-465.31.run
+curl -O https://download.nvidia.com/XFree86/Linux-x86_64/470.42.01/NVIDIA-Linux-x86_64-470.42.01.run
 ```
 
 ```sh
 # Save the install cmd before reboot
 tee ~/install_nvidia.sh <<EOF > /dev/null
-sudo sh ~/Downloads/NVIDIA-Linux-x86_64-465.31.run \
+sudo sh ~/Downloads/NVIDIA-Linux-x86_64-470.42.01.run \
 --utility-prefix=/opt/nvidia \
 --opengl-prefix=/opt/nvidia \
 --compat32-prefix=/opt/nvidia \

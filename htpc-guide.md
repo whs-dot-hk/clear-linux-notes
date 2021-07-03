@@ -1,4 +1,4 @@
-# Install `desktop-dev` and `devpkg-libass`
+# Install `desktop-dev`
 ```sh
 sudo swupd bundle-add desktop-dev
 ```

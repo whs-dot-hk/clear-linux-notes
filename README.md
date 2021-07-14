@@ -35,7 +35,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 | Name | Command |
 | --- | --- |
-| LibreOffice | `flatpak install --or-update flathub org.libreoffice.LibreOffice` |
+| LibreOffice | `flatpak install --or-update -y flathub org.libreoffice.LibreOffice` |
 | Runescape | `flatpak install --or-update -y flathub com.jagex.RuneScape` |
 | Steam | `flatpak install --or-update -y flathub com.valvesoftware.Steam` |
 
